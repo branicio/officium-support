@@ -6,61 +6,177 @@
 <title>Terms of Use — Officium</title>
 <link rel="icon" href="app-icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
 <body>
 
+<!-- Chrome: lives outside every [data-lang] section, so its text is swapped by
+     site.js from the data-i18n-* attributes rather than by duplication. The
+     three tab labels stay untranslated: a language's own endonym is correct in
+     every locale. -->
 <header class="hero">
-  <div class="crest" role="img" aria-label="Officium app icon"></div>
+  <div class="crest" role="img" aria-label="Officium app icon"
+       data-i18n-aria-en="Officium app icon"
+       data-i18n-aria-pt="Ícone do aplicativo Officium"
+       data-i18n-aria-es="Ícono de la aplicación Officium"></div>
   <div class="wordmark">Officium</div>
-  <p class="sub">Terms of Use</p>
+  <p class="sub" data-i18n-en="Terms of Use"
+     data-i18n-pt="Termos de Uso"
+     data-i18n-es="Términos de Uso">Terms of Use</p>
   <div class="rule"></div>
+  <div class="langtabs" role="tablist" aria-label="Language"
+       data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma">
+    <button type="button" role="tab" class="langtab" data-lang-target="en" aria-label="English">EN</button>
+    <button type="button" role="tab" class="langtab" data-lang-target="pt" aria-label="Português">PT</button>
+    <button type="button" role="tab" class="langtab" data-lang-target="es" aria-label="Español">ES</button>
+  </div>
 </header>
 
 <main>
-  <p class="tag">Effective July 21, 2026</p>
 
-  <section>
-    <p class="lede">Officium is offered under Apple's standard
-    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed
-    Application End User License Agreement</a>.</p>
+  <!-- ============================================================ ENGLISH ==
+       site.js stamps role="tabpanel" and aria-hidden on this element; never
+       hand-author those. The ids en / pt / es are the deep-link anchors the
+       iOS app uses (terms.html#pt, terms.html#es). Portuguese and Spanish are
+       exact structural copies of this block with the copy swapped. -->
+  <section data-lang="en" id="en" lang="en" aria-label="English">
+
+    <p class="tag">Effective July 21, 2026</p>
+
+    <section>
+      <p class="lede">Officium is offered under Apple's standard
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed
+      Application End User License Agreement</a>.</p>
+    </section>
+
+    <section>
+      <h2>Subscription</h2>
+      <p>&ldquo;Officium Complete&rdquo; is an auto-renewable subscription ($2.99/month or
+      $9.99/year, or the equivalent in your local currency — the exact price is shown in
+      the App Store before you subscribe) that unlocks the seven subscription hours of the
+      Roman office — Matins, Lauds, Prime, Terce, Sext, None and Vespers — and the complete
+      Little Office of the Blessed Virgin Mary (all eight of its hours). A two-week free
+      introductory trial is available to eligible new subscribers; Apple determines
+      eligibility. Payment is charged to your Apple Account when an eligible trial ends, or
+      at confirmation of purchase if no trial applies. The subscription renews automatically
+      unless cancelled at least 24 hours before the end of the current period. Manage or
+      cancel in Settings → Apple Account → Subscriptions. Roman-office Compline remains free
+      without a subscription.</p>
+    </section>
+
+    <section>
+      <h2>Content</h2>
+      <p>Liturgical texts are public-domain editions; structural data derives from the
+      Divinum Officium Project (MIT License). Read-aloud audio of the Little Office is
+      generated in-house from those public-domain texts. Sources are listed inside the app
+      under Settings → Content Sources. The texts and audio are provided for prayer and
+      study without warranty of fitness for liturgical obligation.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
   </section>
 
-  <section>
-    <h2>Subscription</h2>
-    <p>&ldquo;Officium Complete&rdquo; is an auto-renewable subscription ($2.99/month or
-    $9.99/year, or the equivalent in your local currency — the exact price is shown in
-    the App Store before you subscribe) that unlocks the seven subscription hours of the
-    Roman office — Matins, Lauds, Prime, Terce, Sext, None and Vespers — and the complete
-    Little Office of the Blessed Virgin Mary (all eight of its hours). A two-week free
-    introductory trial is available to eligible new subscribers; Apple determines
-    eligibility. Payment is charged to your Apple Account when an eligible trial ends, or
-    at confirmation of purchase if no trial applies. The subscription renews automatically
-    unless cancelled at least 24 hours before the end of the current period. Manage or
-    cancel in Settings → Apple Account → Subscriptions. Roman-office Compline remains free
-    without a subscription.</p>
+  <!-- ========================================================== PORTUGUÊS == -->
+  <section data-lang="pt" id="pt" lang="pt-BR" aria-label="Português">
+
+    <p class="tag">Em vigor desde 21 de julho de 2026</p>
+
+    <section>
+      <p class="lede">O Officium é oferecido sob o
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Contrato
+      de Licença de Usuário Final de Aplicativo Licenciado</a> padrão da Apple.</p>
+    </section>
+
+    <section>
+      <h2>Assinatura</h2>
+      <p>&ldquo;Officium Complete&rdquo; é uma assinatura com renovação automática
+      (US$&nbsp;2,99/mês ou US$&nbsp;9,99/ano, ou o equivalente na sua moeda local — o
+      preço exato é mostrado na App Store antes de você assinar) que desbloqueia as sete
+      horas por assinatura do ofício romano — Matinas, Laudes, Prima, Terça, Sexta, Noa e
+      Vésperas — e o Pequeno Ofício da Bem-Aventurada Virgem Maria completo (as oito horas
+      que o compõem). Um período de teste introdutório gratuito de duas semanas está
+      disponível para novos assinantes elegíveis; a Apple determina a elegibilidade. O
+      pagamento é cobrado na sua Conta Apple quando um teste elegível termina, ou na
+      confirmação da compra se nenhum teste se aplicar. A assinatura é renovada
+      automaticamente, a menos que seja cancelada pelo menos 24 horas antes do fim do
+      período vigente. Gerencie ou cancele em Ajustes → Conta Apple → Assinaturas. As
+      Completas do ofício romano continuam gratuitas sem assinatura.</p>
+    </section>
+
+    <section>
+      <h2>Conteúdo</h2>
+      <p>Os textos litúrgicos são edições de domínio público; os dados estruturais derivam
+      do Divinum Officium Project (licença MIT). O áudio de leitura em voz alta do Pequeno
+      Ofício é gerado internamente a partir desses textos de domínio público. As fontes
+      estão listadas dentro do aplicativo em Ajustes → Fontes de Conteúdo. Os textos e o
+      áudio são fornecidos para oração e estudo, sem garantia de adequação ao cumprimento
+      de obrigação litúrgica.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contato</h2>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
   </section>
 
-  <section>
-    <h2>Content</h2>
-    <p>Liturgical texts are public-domain editions; structural data derives from the
-    Divinum Officium Project (MIT License). Read-aloud audio of the Little Office is
-    generated in-house from those public-domain texts. Sources are listed inside the app
-    under Settings → Content Sources. The texts and audio are provided for prayer and
-    study without warranty of fitness for liturgical obligation.</p>
+  <!-- ============================================================ ESPAÑOL == -->
+  <section data-lang="es" id="es" lang="es-419" aria-label="Español">
+
+    <p class="tag">Vigente desde el 21 de julio de 2026</p>
+
+    <section>
+      <p class="lede">Officium se ofrece bajo el
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Contrato
+      de Licencia de Usuario Final de Aplicación Licenciada</a> estándar de Apple.</p>
+    </section>
+
+    <section>
+      <h2>Suscripción</h2>
+      <p>&ldquo;Officium Complete&rdquo; es una suscripción con renovación automática
+      (US$&nbsp;2.99 al mes o US$&nbsp;9.99 al año, o el equivalente en su moneda local —
+      el precio exacto se muestra en el App Store antes de suscribirse) que desbloquea las
+      siete horas de suscripción del oficio romano — Maitines, Laudes, Prima, Tercia,
+      Sexta, Nona y Vísperas — y el Oficio Parvo de la Bienaventurada Virgen María completo
+      (las ocho horas que lo componen). Hay una prueba introductoria gratuita de dos
+      semanas disponible para los nuevos suscriptores elegibles; Apple determina la
+      elegibilidad. El pago se carga a su Cuenta de Apple cuando termina una prueba
+      elegible, o al confirmarse la compra si no corresponde ninguna prueba. La
+      suscripción se renueva automáticamente a menos que se cancele al menos 24 horas
+      antes del final del período vigente. Adminístrela o cancélela en Configuración →
+      Cuenta de Apple → Suscripciones. Las Completas del oficio romano siguen siendo
+      gratuitas sin suscripción.</p>
+    </section>
+
+    <section>
+      <h2>Contenido</h2>
+      <p>Los textos litúrgicos son ediciones de dominio público; los datos estructurales
+      derivan del Divinum Officium Project (licencia MIT). El audio de lectura en voz alta
+      del Oficio Parvo se genera internamente a partir de esos textos de dominio público.
+      Las fuentes están listadas dentro de la aplicación en Configuración → Fuentes de
+      Contenido. Los textos y el audio se ofrecen para la oración y el estudio, sin
+      garantía de idoneidad para el cumplimiento de una obligación litúrgica.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contacto</h2>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
-  </section>
 </main>
 
 <footer>
   <div class="brand">Officium — 1962 Roman Breviary</div>
   <nav>
-    <a href="index.html">Support</a> ·
-    <a href="privacy.html">Privacy Policy</a> ·
-    <a href="terms.html">Terms of Use</a>
+    <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte">Support</a> ·
+    <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad">Privacy Policy</a> ·
+    <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso">Terms of Use</a>
   </nav>
 </footer>
 

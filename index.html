@@ -4,118 +4,363 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Officium — Support</title>
-<meta name="description" content="Support for Officium: the 1962 Roman Breviary and the Little Office of the BVM for iOS — Latin and English, offline.">
+<meta name="description" content="Support for Officium: the 1962 Roman Breviary and the Little Office of the BVM for iOS — Latin and English, offline. English, Portuguese and Spanish.">
 <link rel="icon" href="app-icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
 <body>
 
+<!-- Chrome: lives outside every [data-lang] section, so its text is swapped by
+     site.js from the data-i18n-* attributes rather than by duplication. The
+     three tab labels stay untranslated: a language's own endonym is correct in
+     every locale. -->
 <header class="hero">
-  <div class="crest" role="img" aria-label="Officium app icon"></div>
+  <div class="crest" role="img" aria-label="Officium app icon"
+       data-i18n-aria-en="Officium app icon"
+       data-i18n-aria-pt="Ícone do aplicativo Officium"
+       data-i18n-aria-es="Ícono de la aplicación Officium"></div>
   <div class="wordmark">Officium</div>
-  <p class="sub">The Traditional Divine Office</p>
+  <p class="sub" data-i18n-en="The Traditional Divine Office"
+     data-i18n-pt="O Ofício Divino Tradicional"
+     data-i18n-es="El Oficio Divino Tradicional">The Traditional Divine Office</p>
   <div class="rule"></div>
+  <div class="langtabs" role="tablist" aria-label="Language"
+       data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma">
+    <button type="button" role="tab" class="langtab" data-lang-target="en" aria-label="English">EN</button>
+    <button type="button" role="tab" class="langtab" data-lang-target="pt" aria-label="Português">PT</button>
+    <button type="button" role="tab" class="langtab" data-lang-target="es" aria-label="Español">ES</button>
+  </div>
 </header>
 
 <main>
 
-  <section>
-    <p class="lede"><span class="drop">O</span>fficium is the traditional Roman
-    Breviary — the 1962 typical edition, under the rubrics of 1960 — with the correct
-    office resolved for every day, Latin and English side by side, and everything
-    working offline. Alongside it prays the Little Office of the Blessed Virgin Mary,
-    the layperson's office of Our Lady, which you can also hear read aloud.</p>
-  </section>
+  <!-- ============================================================ ENGLISH ==
+       site.js stamps role="tabpanel" and aria-hidden on this element; never
+       hand-author those. The ids en / pt / es are the deep-link anchors
+       (index.html#pt, index.html#es). Portuguese and Spanish are exact
+       structural copies of this block with the copy swapped. -->
+  <section data-lang="en" id="en" lang="en" aria-label="English">
 
-  <section>
-    <div class="eyebrow">What's inside</div>
-    <div class="grid">
-      <div class="card gild">
-        <h3><span class="mk">&#10016;</span>All eight hours</h3>
-        <p>Matins, Lauds, Prime, Terce, Sext, None, Vespers and Compline — the complete
-        daily cursus of the 1962 Roman office, for every day from 2026 through 2035.</p>
-        <div class="hours">
-          <span>Matins</span><span>Lauds</span><span>Prime</span><span>Terce</span>
-          <span>Sext</span><span>None</span><span>Vespers</span><span>Compline</span>
+    <section>
+      <p class="lede"><span class="drop">O</span>fficium is the traditional Roman
+      Breviary — the 1962 typical edition, under the rubrics of 1960 — with the correct
+      office resolved for every day, Latin and English side by side, and everything
+      working offline. Alongside it prays the Little Office of the Blessed Virgin Mary,
+      the layperson's office of Our Lady, which you can also hear read aloud.</p>
+    </section>
+
+    <section>
+      <div class="eyebrow">What's inside</div>
+      <div class="grid">
+        <div class="card gild">
+          <h3><span class="mk">&#10016;</span>All eight hours</h3>
+          <p>Matins, Lauds, Prime, Terce, Sext, None, Vespers and Compline — the complete
+          daily cursus of the 1962 Roman office, for every day from 2026 through 2035.</p>
+          <div class="hours">
+            <span>Matins</span><span>Lauds</span><span>Prime</span><span>Terce</span>
+            <span>Sext</span><span>None</span><span>Vespers</span><span>Compline</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>The Little Office of the B.V.M.</h3>
+          <p>The complete Officium Parvum in its own tab — the traditional lay office of
+          Our Lady, with its seasonal variants for the whole year.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Listen &amp; follow along</h3>
+          <p>Every hour of the Little Office can be read aloud, fully offline, with
+          verse-by-verse highlighting that follows the voice, adjustable speed, and
+          lock-screen controls.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Latin &amp; English</h3>
+          <p>The Clementine psalter side by side with English — or either alone. Choose
+          modern (Catholic Public Domain Version) or traditional (Douay-Rheims).</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>A traditional ordo</h3>
+          <p>The calendar shows each day's celebration, class and liturgical colour, with
+          home-screen and lock-screen widgets for today's feast.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Offline &amp; private</h3>
+          <p>No account, no ads, no tracking, no developer server. All prayer texts, audio
+          and the calendar are bundled with the app. Compline is free forever.</p>
         </div>
       </div>
-      <div class="card">
-        <h3><span class="mk">&#10016;</span>The Little Office of the B.V.M.</h3>
-        <p>The complete Officium Parvum in its own tab — the traditional lay office of
-        Our Lady, with its seasonal variants for the whole year.</p>
-      </div>
-      <div class="card">
-        <h3><span class="mk">&#10016;</span>Listen &amp; follow along</h3>
-        <p>Every hour of the Little Office can be read aloud, fully offline, with
-        verse-by-verse highlighting that follows the voice, adjustable speed, and
-        lock-screen controls.</p>
-      </div>
-      <div class="card">
-        <h3><span class="mk">&#10016;</span>Latin &amp; English</h3>
-        <p>The Clementine psalter side by side with English — or either alone. Choose
-        modern (Catholic Public Domain Version) or traditional (Douay-Rheims).</p>
-      </div>
-      <div class="card">
-        <h3><span class="mk">&#10016;</span>A traditional ordo</h3>
-        <p>The calendar shows each day's celebration, class and liturgical colour, with
-        home-screen and lock-screen widgets for today's feast.</p>
-      </div>
-      <div class="card">
-        <h3><span class="mk">&#10016;</span>Offline &amp; private</h3>
-        <p>No account, no ads, no tracking, no developer server. All prayer texts, audio
-        and the calendar are bundled with the app. Compline is free forever.</p>
-      </div>
-    </div>
+    </section>
+
+    <section class="faq">
+      <div class="eyebrow">Frequently asked</div>
+      <details open>
+        <summary>Which rubrics does Officium follow?</summary>
+        <div class="a">The 1960 rubrics (1962 typical edition) — the office prayed
+        alongside the 1962 Missale Romanum. The daily structure is verified against the
+        Divinum Officium project.</div>
+      </details>
+      <details>
+        <summary>Is Compline really free?</summary>
+        <div class="a">Yes — the Roman-office Compline is free forever, with no account
+        needed.</div>
+      </details>
+      <details>
+        <summary>What does the subscription unlock?</summary>
+        <div class="a">The other seven hours of the Roman office — Matins, Lauds, Prime,
+        Terce, Sext, None and Vespers — and the complete Little Office of the Blessed
+        Virgin Mary, every day from 2026 through 2035, fully offline.</div>
+      </details>
+      <details>
+        <summary>Can I listen to the Little Office?</summary>
+        <div class="a">Yes. Every hour can be read aloud, fully offline, with verse-by-verse
+        highlighting and adjustable playback speed.</div>
+      </details>
+      <details>
+        <summary>Modern or traditional English?</summary>
+        <div class="a">Both. Choose in Settings → Reading → Psalm translation: modern
+        English (default) or the traditional Douay-Rheims.</div>
+      </details>
+      <details>
+        <summary>Does Officium need internet access?</summary>
+        <div class="a">No. Prayer texts, audio and the 2026–2035 calendar are bundled and
+        work without a developer server. Purchasing or restoring a subscription uses
+        Apple's StoreKit service; support, legal and review links open Apple services or
+        your browser.</div>
+      </details>
+      <details>
+        <summary>How do I cancel?</summary>
+        <div class="a">Settings → Apple Account → Subscriptions. Your access continues to
+        the end of the paid period.</div>
+      </details>
+    </section>
+
+    <section class="contact">
+      <h2>Get in touch</h2>
+      <p>Questions, corrections to a text, or feature requests — we aim to reply within
+      two business days.</p>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
   </section>
 
-  <section class="faq">
-    <div class="eyebrow">Frequently asked</div>
-    <details open>
-      <summary>Which rubrics does Officium follow?</summary>
-      <div class="a">The 1960 rubrics (1962 typical edition) — the office prayed
-      alongside the 1962 Missale Romanum. The daily structure is verified against the
-      Divinum Officium project.</div>
-    </details>
-    <details>
-      <summary>Is Compline really free?</summary>
-      <div class="a">Yes — the Roman-office Compline is free forever, with no account
-      needed.</div>
-    </details>
-    <details>
-      <summary>What does the subscription unlock?</summary>
-      <div class="a">The other seven hours of the Roman office — Matins, Lauds, Prime,
-      Terce, Sext, None and Vespers — and the complete Little Office of the Blessed
-      Virgin Mary, every day from 2026 through 2035, fully offline.</div>
-    </details>
-    <details>
-      <summary>Can I listen to the Little Office?</summary>
-      <div class="a">Yes. Every hour can be read aloud, fully offline, with verse-by-verse
-      highlighting and adjustable playback speed.</div>
-    </details>
-    <details>
-      <summary>Modern or traditional English?</summary>
-      <div class="a">Both. Choose in Settings → Reading → Psalm translation: modern
-      English (default) or the traditional Douay-Rheims.</div>
-    </details>
-    <details>
-      <summary>Does Officium need internet access?</summary>
-      <div class="a">No. Prayer texts, audio and the 2026–2035 calendar are bundled and
-      work without a developer server. Purchasing or restoring a subscription uses
-      Apple's StoreKit service; support, legal and review links open Apple services or
-      your browser.</div>
-    </details>
-    <details>
-      <summary>How do I cancel?</summary>
-      <div class="a">Settings → Apple Account → Subscriptions. Your access continues to
-      the end of the paid period.</div>
-    </details>
+  <!-- ========================================================== PORTUGUÊS == -->
+  <section data-lang="pt" id="pt" lang="pt-BR" aria-label="Português">
+
+    <section>
+      <p class="lede"><span class="drop">O</span>fficium é o Breviário Romano
+      tradicional — a edição típica de 1962, segundo as rubricas de 1960 — com o ofício
+      correto já determinado para cada dia, latim e inglês lado a lado, e tudo
+      funcionando offline. Junto dele reza-se o Pequeno Ofício da Bem-Aventurada Virgem
+      Maria, o ofício de Nossa Senhora próprio dos leigos, que você também pode ouvir
+      lido em voz alta.</p>
+    </section>
+
+    <section>
+      <div class="eyebrow">O que há dentro</div>
+      <div class="grid">
+        <div class="card gild">
+          <h3><span class="mk">&#10016;</span>Todas as oito horas</h3>
+          <p>Matinas, Laudes, Prima, Terça, Sexta, Noa, Vésperas e Completas — o cursus
+          diário completo do ofício romano de 1962, para todos os dias de 2026 a 2035.</p>
+          <div class="hours">
+            <span>Matinas</span><span>Laudes</span><span>Prima</span><span>Terça</span>
+            <span>Sexta</span><span>Noa</span><span>Vésperas</span><span>Completas</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>O Pequeno Ofício da B.V.M.</h3>
+          <p>O Officium Parvum completo em sua própria aba — o tradicional ofício laical
+          de Nossa Senhora, com suas variantes conforme o tempo litúrgico para o ano
+          inteiro.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Ouça e acompanhe</h3>
+          <p>Cada hora do Pequeno Ofício pode ser lida em voz alta, totalmente offline,
+          com destaque versículo por versículo que acompanha a voz, velocidade ajustável
+          e controles na tela de bloqueio.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Latim e inglês</h3>
+          <p>O saltério clementino lado a lado com o inglês — ou cada um sozinho. Escolha
+          a versão moderna (Catholic Public Domain Version) ou a tradicional
+          (Douay-Rheims).</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Um ordo tradicional</h3>
+          <p>O calendário mostra a celebração, a classe e a cor litúrgica de cada dia,
+          com widgets de tela de início e de tela de bloqueio para a festa de hoje.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Offline e privado</h3>
+          <p>Sem conta, sem anúncios, sem rastreamento, sem servidor do desenvolvedor.
+          Todos os textos de oração, o áudio e o calendário vêm incluídos no aplicativo.
+          As Completas são gratuitas para sempre.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="eyebrow">Perguntas frequentes</div>
+      <details open>
+        <summary>Quais rubricas o Officium segue?</summary>
+        <div class="a">As rubricas de 1960 (edição típica de 1962) — o ofício rezado
+        junto ao Missale Romanum de 1962. A estrutura diária é conferida com o projeto
+        Divinum Officium.</div>
+      </details>
+      <details>
+        <summary>As Completas são mesmo gratuitas?</summary>
+        <div class="a">Sim — as Completas do ofício romano são gratuitas para sempre,
+        sem necessidade de conta.</div>
+      </details>
+      <details>
+        <summary>O que a assinatura desbloqueia?</summary>
+        <div class="a">As outras sete horas do ofício romano — Matinas, Laudes, Prima,
+        Terça, Sexta, Noa e Vésperas — e o Pequeno Ofício da Bem-Aventurada Virgem Maria
+        completo, todos os dias de 2026 a 2035, totalmente offline.</div>
+      </details>
+      <details>
+        <summary>Posso ouvir o Pequeno Ofício?</summary>
+        <div class="a">Sim. Cada hora pode ser lida em voz alta, totalmente offline, com
+        destaque versículo por versículo e velocidade de reprodução ajustável.</div>
+      </details>
+      <details>
+        <summary>Inglês moderno ou tradicional?</summary>
+        <div class="a">Ambos. Escolha em Ajustes → Leitura → Tradução dos salmos: inglês
+        moderno (padrão) ou a tradicional Douay-Rheims.</div>
+      </details>
+      <details>
+        <summary>O Officium precisa de acesso à internet?</summary>
+        <div class="a">Não. Os textos de oração, o áudio e o calendário de 2026–2035 vêm
+        incluídos e funcionam sem servidor do desenvolvedor. Comprar ou restaurar uma
+        assinatura usa o serviço StoreKit da Apple; os links de suporte, jurídicos e de
+        avaliação abrem serviços da Apple ou o seu navegador.</div>
+      </details>
+      <details>
+        <summary>Como faço para cancelar?</summary>
+        <div class="a">Ajustes → Conta Apple → Assinaturas. Seu acesso continua até o
+        fim do período pago.</div>
+      </details>
+    </section>
+
+    <section class="contact">
+      <h2>Fale conosco</h2>
+      <p>Dúvidas, correções a um texto ou sugestões de recursos — procuramos responder
+      em até dois dias úteis.</p>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
   </section>
 
-  <section class="contact">
-    <h2>Get in touch</h2>
-    <p>Questions, corrections to a text, or feature requests — we aim to reply within
-    two business days.</p>
-    <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+  <!-- ============================================================ ESPAÑOL == -->
+  <section data-lang="es" id="es" lang="es-419" aria-label="Español">
+
+    <section>
+      <p class="lede"><span class="drop">O</span>fficium es el Breviario Romano
+      tradicional — la edición típica de 1962, según las rúbricas de 1960 — con el
+      oficio correcto ya determinado para cada día, latín e inglés lado a lado, y todo
+      funcionando sin conexión. Junto a él se reza el Oficio Parvo de la Bienaventurada
+      Virgen María, el oficio de Nuestra Señora propio de los laicos, que también puede
+      escuchar leído en voz alta.</p>
+    </section>
+
+    <section>
+      <div class="eyebrow">Qué hay dentro</div>
+      <div class="grid">
+        <div class="card gild">
+          <h3><span class="mk">&#10016;</span>Las ocho horas</h3>
+          <p>Maitines, Laudes, Prima, Tercia, Sexta, Nona, Vísperas y Completas — el
+          cursus diario completo del oficio romano de 1962, para todos los días de 2026
+          a 2035.</p>
+          <div class="hours">
+            <span>Maitines</span><span>Laudes</span><span>Prima</span><span>Tercia</span>
+            <span>Sexta</span><span>Nona</span><span>Vísperas</span><span>Completas</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>El Oficio Parvo de la B.V.M.</h3>
+          <p>El Officium Parvum completo en su propia pestaña — el tradicional oficio
+          laical de Nuestra Señora, con sus variantes según el tiempo litúrgico para
+          todo el año.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Escuche y siga la lectura</h3>
+          <p>Cada hora del Oficio Parvo puede leerse en voz alta, totalmente sin
+          conexión, con resaltado versículo por versículo que sigue a la voz, velocidad
+          ajustable y controles en la pantalla de bloqueo.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Latín e inglés</h3>
+          <p>El salterio clementino lado a lado con el inglés — o cada uno por separado.
+          Elija la versión moderna (Catholic Public Domain Version) o la tradicional
+          (Douay-Rheims).</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Un ordo tradicional</h3>
+          <p>El calendario muestra la celebración, la clase y el color litúrgico de cada
+          día, con widgets para la pantalla de inicio y la pantalla de bloqueo con la
+          fiesta de hoy.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Sin conexión y privado</h3>
+          <p>Sin cuenta, sin anuncios, sin rastreo, sin servidor del desarrollador.
+          Todos los textos de oración, el audio y el calendario vienen incluidos en la
+          aplicación. Las Completas son gratuitas para siempre.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <details open>
+        <summary>¿Qué rúbricas sigue Officium?</summary>
+        <div class="a">Las rúbricas de 1960 (edición típica de 1962) — el oficio que se
+        reza junto al Missale Romanum de 1962. La estructura diaria se coteja con el
+        proyecto Divinum Officium.</div>
+      </details>
+      <details>
+        <summary>¿Las Completas son realmente gratuitas?</summary>
+        <div class="a">Sí — las Completas del oficio romano son gratuitas para siempre,
+        sin necesidad de cuenta.</div>
+      </details>
+      <details>
+        <summary>¿Qué desbloquea la suscripción?</summary>
+        <div class="a">Las otras siete horas del oficio romano — Maitines, Laudes,
+        Prima, Tercia, Sexta, Nona y Vísperas — y el Oficio Parvo de la Bienaventurada
+        Virgen María completo, todos los días de 2026 a 2035, totalmente sin
+        conexión.</div>
+      </details>
+      <details>
+        <summary>¿Puedo escuchar el Oficio Parvo?</summary>
+        <div class="a">Sí. Cada hora puede leerse en voz alta, totalmente sin conexión,
+        con resaltado versículo por versículo y velocidad de reproducción
+        ajustable.</div>
+      </details>
+      <details>
+        <summary>¿Inglés moderno o tradicional?</summary>
+        <div class="a">Ambos. Elija en Configuración → Lectura → Traducción de los
+        salmos: inglés moderno (predeterminado) o la tradicional Douay-Rheims.</div>
+      </details>
+      <details>
+        <summary>¿Officium necesita acceso a internet?</summary>
+        <div class="a">No. Los textos de oración, el audio y el calendario de 2026–2035
+        vienen incluidos y funcionan sin servidor del desarrollador. Comprar o restaurar
+        una suscripción usa el servicio StoreKit de Apple; los enlaces de soporte,
+        legales y de reseña se abren en servicios de Apple o en su navegador.</div>
+      </details>
+      <details>
+        <summary>¿Cómo cancelo?</summary>
+        <div class="a">Configuración → Cuenta de Apple → Suscripciones. Su acceso
+        continúa hasta el final del período pagado.</div>
+      </details>
+    </section>
+
+    <section class="contact">
+      <h2>Contáctenos</h2>
+      <p>Preguntas, correcciones a un texto o solicitudes de funciones — procuramos
+      responder dentro de dos días hábiles.</p>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
   </section>
 
 </main>
@@ -123,9 +368,9 @@
 <footer>
   <div class="brand">Officium — 1962 Roman Breviary</div>
   <nav>
-    <a href="index.html">Support</a> ·
-    <a href="privacy.html">Privacy Policy</a> ·
-    <a href="terms.html">Terms of Use</a>
+    <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte">Support</a> ·
+    <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad">Privacy Policy</a> ·
+    <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso">Terms of Use</a>
   </nav>
 </footer>
 

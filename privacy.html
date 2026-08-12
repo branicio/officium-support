@@ -6,47 +6,133 @@
 <title>Privacy Policy — Officium</title>
 <link rel="icon" href="app-icon.png">
 <link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
 <body>
 
+<!-- Chrome: lives outside every [data-lang] section, so its text is swapped by
+     site.js from the data-i18n-* attributes rather than by duplication. The
+     three tab labels stay untranslated: a language's own endonym is correct in
+     every locale. -->
 <header class="hero">
-  <div class="crest" role="img" aria-label="Officium app icon"></div>
+  <div class="crest" role="img" aria-label="Officium app icon"
+       data-i18n-aria-en="Officium app icon"
+       data-i18n-aria-pt="Ícone do aplicativo Officium"
+       data-i18n-aria-es="Ícono de la aplicación Officium"></div>
   <div class="wordmark">Officium</div>
-  <p class="sub">Privacy Policy</p>
+  <p class="sub" data-i18n-en="Privacy Policy"
+     data-i18n-pt="Política de Privacidade"
+     data-i18n-es="Política de Privacidad">Privacy Policy</p>
   <div class="rule"></div>
+  <div class="langtabs" role="tablist" aria-label="Language"
+       data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma">
+    <button type="button" role="tab" class="langtab" data-lang-target="en" aria-label="English">EN</button>
+    <button type="button" role="tab" class="langtab" data-lang-target="pt" aria-label="Português">PT</button>
+    <button type="button" role="tab" class="langtab" data-lang-target="es" aria-label="Español">ES</button>
+  </div>
 </header>
 
 <main>
-  <p class="tag">Effective July 21, 2026</p>
 
-  <section>
-    <p class="lede"><b>Officium collects no data.</b> The app has no analytics, no
-    advertising, no tracking, no account system, and no developer-operated network
-    service. All liturgical content, calendar data and read-aloud audio are bundled with
-    the app and work offline.</p>
+  <!-- ============================================================ ENGLISH ==
+       site.js stamps role="tabpanel" and aria-hidden on this element; never
+       hand-author those. The ids en / pt / es are the deep-link anchors the
+       iOS app uses (privacy.html#pt, privacy.html#es). Portuguese and Spanish
+       are exact structural copies of this block with the copy swapped. -->
+  <section data-lang="en" id="en" lang="en" aria-label="English">
+
+    <p class="tag">Effective July 21, 2026</p>
+
+    <section>
+      <p class="lede"><b>Officium collects no data.</b> The app has no analytics, no
+      advertising, no tracking, no account system, and no developer-operated network
+      service. All liturgical content, calendar data and read-aloud audio are bundled with
+      the app and work offline.</p>
+    </section>
+
+    <section>
+      <h2>Purchases</h2>
+      <p>Subscription purchase and restore actions are processed by Apple.
+      We never receive your payment details. Apple's handling of that data is described in
+      Apple's privacy policy. Some links in the app — the support page, this Privacy
+      Policy, the Terms of Use, and the option to rate Officium — open in your browser or
+      in the App Store; Officium does not receive any data from those visits.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
   </section>
 
-  <section>
-    <h2>Purchases</h2>
-    <p>Subscription purchase and restore actions are processed by Apple.
-    We never receive your payment details. Apple's handling of that data is described in
-    Apple's privacy policy. Some links in the app — the support page, this Privacy
-    Policy, the Terms of Use, and the option to rate Officium — open in your browser or
-    in the App Store; Officium does not receive any data from those visits.</p>
+  <!-- ========================================================== PORTUGUÊS == -->
+  <section data-lang="pt" id="pt" lang="pt-BR" aria-label="Português">
+
+    <p class="tag">Em vigor desde 21 de julho de 2026</p>
+
+    <section>
+      <p class="lede"><b>O Officium não coleta nenhum dado.</b> O aplicativo não tem
+      análises de uso, publicidade, rastreamento, sistema de contas nem serviço de rede
+      operado pelo desenvolvedor. Todo o conteúdo litúrgico, os dados do calendário e o
+      áudio de leitura em voz alta vêm incluídos no aplicativo e funcionam offline.</p>
+    </section>
+
+    <section>
+      <h2>Compras</h2>
+      <p>As ações de compra e restauração da assinatura são processadas pela Apple.
+      Nunca recebemos seus dados de pagamento. O tratamento desses dados pela Apple está
+      descrito na política de privacidade da Apple. Alguns links no aplicativo — a página
+      de suporte, esta Política de Privacidade, os Termos de Uso e a opção de avaliar o
+      Officium — abrem no seu navegador ou na App Store; o Officium não recebe nenhum
+      dado dessas visitas.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contato</h2>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+  <!-- ============================================================ ESPAÑOL == -->
+  <section data-lang="es" id="es" lang="es-419" aria-label="Español">
+
+    <p class="tag">Vigente desde el 21 de julio de 2026</p>
+
+    <section>
+      <p class="lede"><b>Officium no recopila ningún dato.</b> La aplicación no tiene
+      analítica, publicidad, rastreo, sistema de cuentas ni servicio de red operado por
+      el desarrollador. Todo el contenido litúrgico, los datos del calendario y el audio
+      de lectura en voz alta vienen incluidos en la aplicación y funcionan sin
+      conexión.</p>
+    </section>
+
+    <section>
+      <h2>Compras</h2>
+      <p>Las acciones de compra y restauración de la suscripción las procesa Apple.
+      Nunca recibimos sus datos de pago. El tratamiento de esos datos por parte de Apple
+      se describe en la política de privacidad de Apple. Algunos enlaces de la
+      aplicación — la página de soporte, esta Política de Privacidad, los Términos de Uso
+      y la opción de calificar Officium — se abren en su navegador o en el App Store;
+      Officium no recibe ningún dato de esas visitas.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contacto</h2>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
   </section>
+
 </main>
 
 <footer>
   <div class="brand">Officium — 1962 Roman Breviary</div>
   <nav>
-    <a href="index.html">Support</a> ·
-    <a href="privacy.html">Privacy Policy</a> ·
-    <a href="terms.html">Terms of Use</a>
+    <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte">Support</a> ·
+    <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad">Privacy Policy</a> ·
+    <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso">Terms of Use</a>
   </nav>
 </footer>
 

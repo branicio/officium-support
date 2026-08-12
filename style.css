@@ -168,3 +168,43 @@ footer nav a { margin:0 8px; border:none; }
   .grid { grid-template-columns:1fr; }
   main { padding:40px 20px 32px; }
 }
+
+/* ---- Language tabs (EN · PT · ES) ----
+   Sit in the hero under the gold rule; centred by the hero's text-align.
+   Small caps and hairline gold, to match the eyebrow's restraint. */
+.langtabs { display:inline-flex; gap:8px; margin-top:26px; }
+.langtab {
+  appearance:none; -webkit-appearance:none; cursor:pointer;
+  font-family:"EB Garamond", Georgia, 'Times New Roman', serif;
+  font-size:.8rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+  color:rgba(244,236,218,.75); background:transparent;
+  border:1px solid rgba(201,162,39,.42); border-radius:999px;
+  padding:7px 16px 6px; line-height:1;
+  transition:color .15s, background-color .15s, border-color .15s;
+}
+.langtab:hover { color:var(--gold); border-color:var(--gold); }
+.langtab:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+.langtab[aria-selected="true"] {
+  background:var(--gold); border-color:var(--gold);
+  color:var(--charcoal-2); font-weight:700;
+}
+
+/* ---- Language sections ----
+   Hidden only while site.js has stamped data-js="on" on <html>. If the script
+   never runs, or fails and withdraws the attribute, all three languages render
+   stacked — readable, anchor-navigable, complete. Never hide [data-lang]
+   outside an html[data-js="on"] scope. */
+html[data-js="on"] [data-lang] { display:none; }
+html[data-js="on"] [data-lang][data-lang-active] { display:block; }
+
+/* The [data-lang] wrapper is plumbing, not a content section: without this,
+   section's own margin-bottom would double the gap above the footer. */
+main > [data-lang] { margin-bottom:0; }
+
+/* Without JS the three languages stack, so rule a hairline between them and
+   hide the tablist, which could no longer switch anything. (This hides no
+   content — all three languages are already on the page.) */
+html:not([data-js="on"]) main > [data-lang] + [data-lang] {
+  border-top:1px solid var(--hairline); padding-top:46px; margin-top:46px;
+}
+html:not([data-js="on"]) .langtabs { display:none; }
