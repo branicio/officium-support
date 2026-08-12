@@ -169,6 +169,99 @@ footer nav a { margin:0 8px; border:none; }
   main { padding:40px 20px 32px; }
 }
 
+/* ---- Versicle band ----
+   The product's core visual, reproduced typographically: Latin and the
+   vernacular side by side, ℣/℟ marks in rubric red, inside a dark plate
+   framed by a gold hairline — the one thing a visitor should remember. */
+.versicle {
+  position:relative; display:grid; grid-template-columns:1fr 1fr;
+  background:
+    radial-gradient(120% 140% at 50% -30%, #2B3542 0%, var(--charcoal) 55%, var(--charcoal-2) 100%);
+  color:var(--parchment); border-radius:16px; padding:34px 26px 28px;
+  box-shadow:0 12px 34px rgba(31,38,47,.28);
+  font-family:"Cormorant Garamond", serif; font-size:1.26rem; line-height:1.55;
+}
+.versicle::before {
+  content:""; position:absolute; inset:11px; border-radius:10px;
+  border:1px solid rgba(201,162,39,.28); pointer-events:none;
+}
+.v-col { padding:2px 22px; }
+.v-col + .v-col { border-left:1px solid rgba(201,162,39,.28); }
+.v-col:first-child { font-style:italic; color:#EDE4CF; }
+.v-col p { margin-bottom:12px; }
+.v-col p:last-child { margin-bottom:0; }
+.versicle .vr { color:#E2695C; font-style:normal; font-weight:600; }
+.versicle .cross { color:var(--gold); }
+.note {
+  margin-top:12px; text-align:center; color:var(--muted); font-size:.95rem;
+  font-style:italic;
+}
+.note .vr { color:var(--rubric); font-style:normal; }
+
+/* ---- Plans ---- */
+.plans { display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:stretch; }
+.plan {
+  background:var(--card); border:1px solid var(--hairline); border-radius:14px;
+  padding:26px 24px 22px; box-shadow:0 6px 20px rgba(31,38,47,.06);
+  display:flex; flex-direction:column;
+}
+.plan.gild { border-top:3px solid var(--gold); }
+.plan h3 {
+  font-family:"Cormorant Garamond", serif; font-weight:600; font-size:1.42rem;
+  color:var(--ink); margin-bottom:2px;
+}
+.plan .price {
+  font-family:"Cormorant Garamond", serif; font-weight:700;
+  font-size:2.05rem; color:var(--rubric); line-height:1.15; margin-bottom:10px;
+}
+.plan .price small {
+  font-size:1.02rem; font-weight:500; color:var(--muted); font-style:italic;
+}
+.plan ul { list-style:none; margin:2px 0 12px; }
+.plan li {
+  padding-left:1.5em; text-indent:-1.5em; font-size:.99rem; line-height:1.55;
+  color:#4A4235; margin-bottom:7px;
+}
+.plan li::before { content:"\2720\00a0\00a0"; color:var(--gold); font-size:.9rem; }
+.plan .trial {
+  margin-top:auto; font-size:.9rem; color:var(--muted); font-style:italic;
+  border-top:1px solid var(--hairline); padding-top:12px;
+}
+
+/* ---- Where to begin: Roman-numeral steps ---- */
+.steps { list-style:none; counter-reset:step; display:grid; gap:16px; margin:0; }
+.steps li {
+  counter-increment:step; display:flex; gap:18px; align-items:baseline;
+  background:var(--card); border:1px solid var(--hairline); border-radius:14px;
+  padding:18px 22px;
+}
+.steps li::before {
+  content:counter(step, upper-roman) ".";
+  font-family:"Cormorant Garamond", serif; font-weight:700; font-size:1.6rem;
+  color:var(--gold-deep); min-width:2.4rem; text-align:right; line-height:1.1;
+}
+.steps b { color:var(--rubric-deep); font-weight:600; }
+.steps p { margin:0; font-size:1rem; color:#4A4235; }
+
+/* ---- Legal page niceties ---- */
+.legal h2 { margin-top:34px; }
+.legal h2:first-of-type { margin-top:0; }
+.legal h3 {
+  font-family:"Cormorant Garamond", serif; font-weight:600; font-size:1.18rem;
+  color:var(--ink); margin:18px 0 4px;
+}
+.legal ul { margin:0 0 14px 1.3em; }
+.legal li { margin-bottom:6px; }
+
+@media (max-width:640px) {
+  .versicle { grid-template-columns:1fr; font-size:1.16rem; padding:26px 8px 22px; }
+  .v-col + .v-col {
+    border-left:none; border-top:1px solid rgba(201,162,39,.28);
+    margin-top:14px; padding-top:16px;
+  }
+  .plans { grid-template-columns:1fr; }
+}
+
 /* ---- Language tabs (EN · PT · ES) ----
    Sit in the hero under the gold rule; centred by the hero's text-align.
    Small caps and hairline gold, to match the eyebrow's restraint. */
