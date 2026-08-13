@@ -1,8 +1,14 @@
 # Officium — Support
 
 Support site for **Officium: 1962 Roman Breviary**, an iOS app for praying the
-traditional Roman Breviary (1962 typical edition) — Latin and English, side by
-side, correct for every day and fully offline.
+traditional Roman Breviary (1962 typical edition) — Latin beside English,
+Brazilian Portuguese, or Latin-American Spanish, correct for every day and
+fully offline.
+
+This directory is the canonical GitHub Pages source mirrored to the separate
+`branicio/officium-support` repository. The root release checklist records the
+last verified deployment; do not infer that local source changes are live until
+the public pages have been fetched and checked.
 
 ## Links
 

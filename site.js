@@ -60,6 +60,16 @@
       el.dataset.i18nAriaBaseline = el.getAttribute("aria-label") || "";
     });
 
+    // Head metadata uses attributes rather than textContent. Keeping this as
+    // a separate channel makes the visible copy and search/share metadata
+    // change together without special-casing individual pages.
+    var i18nContentEls = Array.prototype.slice.call(
+      document.querySelectorAll("[data-i18n-content-en]")
+    );
+    i18nContentEls.forEach(function (el) {
+      el.dataset.i18nContentBaseline = el.getAttribute("content") || "";
+    });
+
     // In-site page links, collected once; apply() rewrites their fragment so
     // the reader's language survives the click. Absolute and scheme-bearing
     // hrefs (mailto:, https:, protocol-relative //host) drop out before the
@@ -166,6 +176,14 @@
         // An empty label is worse than none; remove the attribute instead.
         if (next) el.setAttribute("aria-label", next);
         else el.removeAttribute("aria-label");
+      });
+
+      i18nContentEls.forEach(function (el) {
+        var v = el.getAttribute("data-i18n-content-" + lang);
+        el.setAttribute(
+          "content",
+          v != null ? v : el.dataset.i18nContentBaseline
+        );
       });
 
       document.documentElement.lang = LANG_ATTR[lang] || lang;
