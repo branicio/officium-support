@@ -1,7 +1,7 @@
 # Officium — Support
 
-Support site for **Officium: 1962 Roman Breviary**, an iOS app for praying the
-traditional Roman Breviary (1962 typical edition) — Latin beside English,
+Support site for **Officium: 1962 Roman Breviary**, an iOS and Android app for
+praying the traditional Roman Breviary (1962 typical edition) — Latin beside English,
 Brazilian Portuguese, or Latin-American Spanish, correct for every day and
 fully offline.
 
