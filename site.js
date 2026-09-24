@@ -1,6 +1,6 @@
 (function () {
   // Set first: style.css only hides [data-lang] sections once this attribute
-  // is present, so a script error degrades to all three languages rendered
+  // is present, so a script error degrades to every language rendered
   // stacked — never to none. Everything after this line runs inside the
   // try/catch below, whose catch removes the attribute again: any failure to
   // complete setup withdraws the stylesheet's authorisation to hide content.
@@ -9,13 +9,13 @@
   document.documentElement.dataset.js = "on";
 
   try {
-    // #en / #pt / #es is the deep-link contract: the iOS app links to
-    // privacy.html#pt, terms.html#es, and so on. The hashes double as the
+    // #en / #pt / #es / #fr is the deep-link contract: the iOS app links to
+    // privacy.html#pt, terms.html#fr, and so on. The hashes double as the
     // hand-authored section ids, so a no-JS visitor following a deep link
     // still lands on the right language in the stacked fallback.
-    var HASH = { en: "en", pt: "pt", es: "es" };
-    var LANG_ATTR = { en: "en", pt: "pt-BR", es: "es-419" };
-    var FRAGMENT = { en: "", pt: "#pt", es: "#es" };
+    var HASH = { en: "en", pt: "pt", es: "es", fr: "fr" };
+    var LANG_ATTR = { en: "en", pt: "pt-BR", es: "es-419", fr: "fr" };
+    var FRAGMENT = { en: "", pt: "#pt", es: "#es", fr: "#fr" };
     var STORE_KEY = "officium.lang";
     // The three real pages of this site, keyed by filename. Everything else
     // an <a> can point at — mailto:, apple.com/legal — is deliberately
@@ -24,7 +24,7 @@
 
     // A function rather than a map lookup, so no inherited Object property
     // ("constructor", "toString", ...) can masquerade as a stored language.
-    function isLang(v) { return v === "en" || v === "pt" || v === "es"; }
+    function isLang(v) { return v === "en" || v === "pt" || v === "es" || v === "fr"; }
 
     var sections = Array.prototype.slice.call(document.querySelectorAll("[data-lang]"));
     var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
@@ -103,7 +103,7 @@
       if (!store) return null;
       try {
         var v = store.getItem(STORE_KEY);
-        // Anything that is not one of the three languages is ignored.
+        // Anything that is not one of the site's languages is ignored.
         return isLang(v) ? v : null;
       } catch (e) {
         return null;
@@ -117,7 +117,7 @@
 
     function pick() {
       // A language named in the URL outranks the stored preference on
-      // purpose: #pt / #es / #en is an explicit, per-visit request — that
+      // purpose: #pt / #es / #fr / #en is an explicit, per-visit request — that
       // link was shared precisely to land the reader in that language —
       // while the stored value only records what this browser chose last
       // time. Then storage, then browser locale, then English.
@@ -128,6 +128,7 @@
       var n = (navigator.language || "en").toLowerCase();
       if (n.indexOf("pt") === 0) return "pt";
       if (n.indexOf("es") === 0) return "es";
+      if (n.indexOf("fr") === 0) return "fr";
       return "en";
     }
 
@@ -224,7 +225,7 @@
     // language counts; a language merely inferred from navigator.language
     // does not, and is never written back.
     if (HASH[initialHash]) remember(initialLang);
-    // Only re-derive the language when the new hash names one of the three
+    // Only re-derive the language when the new hash names one of the
     // language anchors; any other in-page anchor leaves the reader's current
     // language alone. Arriving at a language anchor is an explicit signal,
     // so it is remembered on the same terms as a tab click.
@@ -235,8 +236,8 @@
 
   } catch (err) {
     // Setup did not complete, so withdraw the authorisation data-js grants
-    // the stylesheet to hide content: the no-JS branch takes over and all
-    // three languages render stacked. Never rethrow past here.
+    // the stylesheet to hide content: the no-JS branch takes over and
+    // every language renders stacked. Never rethrow past here.
     document.documentElement.removeAttribute("data-js");
     console.error("site.js: language-tab setup failed, falling back to no-JS presentation", err);
   }

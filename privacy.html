@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n-en="Privacy Policy — Officium" data-i18n-pt="Política de Privacidade — Officium" data-i18n-es="Política de Privacidad — Officium">Privacy Policy — Officium</title>
+<title data-i18n-en="Privacy Policy — Officium" data-i18n-pt="Política de Privacidade — Officium" data-i18n-es="Política de Privacidad — Officium" data-i18n-fr="Politique de confidentialité — Officium">Privacy Policy — Officium</title>
 <meta name="description"
-      content="Officium collects no data: no accounts, no analytics, no tracking, no developer server. The full policy in English, Portuguese and Spanish."
-      data-i18n-content-en="Officium collects no data: no accounts, no analytics, no tracking, no developer server. The full policy in English, Portuguese and Spanish."
-      data-i18n-content-pt="O Officium não coleta dados: sem contas, análise de uso, rastreamento ou servidor do desenvolvedor. Política completa em inglês, português e espanhol."
-      data-i18n-content-es="Officium no recopila datos: sin cuentas, analítica, rastreo ni servidor del desarrollador. Política completa en inglés, portugués y español.">
+      content="Officium collects no data: no accounts, no analytics, no tracking, no developer server. The full policy in English, Portuguese, Spanish and French."
+      data-i18n-content-en="Officium collects no data: no accounts, no analytics, no tracking, no developer server. The full policy in English, Portuguese, Spanish and French."
+      data-i18n-content-pt="O Officium não coleta dados: sem contas, análise de uso, rastreamento ou servidor do desenvolvedor. Política completa em inglês, português, espanhol e francês."
+      data-i18n-content-es="Officium no recopila datos: sin cuentas, analítica, rastreo ni servidor del desarrollador. Política completa en inglés, portugués, español y francés."
+      data-i18n-content-fr="Officium ne collecte aucune donnée : ni compte, ni outil d’analyse, ni pistage, ni serveur du développeur. La politique complète en anglais, portugais, espagnol et français.">
 <link rel="icon" href="app-icon.png">
 <link rel="stylesheet" href="style.css">
 <script src="site.js" defer></script>
@@ -17,23 +18,26 @@
 
 <!-- Chrome: lives outside every [data-lang] section, so its text is swapped by
      site.js from the data-i18n-* attributes rather than by duplication. The
-     three tab labels stay untranslated: a language's own endonym is correct in
-     every locale. -->
+     tab labels stay untranslated: a language's own endonym is correct in every
+     locale. -->
 <header class="hero">
   <div class="crest" role="img" aria-label="Officium app icon"
        data-i18n-aria-en="Officium app icon"
        data-i18n-aria-pt="Ícone do aplicativo Officium"
-       data-i18n-aria-es="Ícono de la aplicación Officium"></div>
+       data-i18n-aria-es="Ícono de la aplicación Officium"
+       data-i18n-aria-fr="Icône de l’application Officium"></div>
   <div class="wordmark">Officium</div>
   <p class="sub" data-i18n-en="Privacy Policy"
      data-i18n-pt="Política de Privacidade"
-     data-i18n-es="Política de Privacidad">Privacy Policy</p>
+     data-i18n-es="Política de Privacidad"
+     data-i18n-fr="Politique de confidentialité">Privacy Policy</p>
   <div class="rule"></div>
   <div class="langtabs" role="tablist" aria-label="Language"
-       data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma">
+       data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma" data-i18n-aria-fr="Langue">
     <button type="button" role="tab" class="langtab" data-lang-target="en" aria-label="English">EN</button>
     <button type="button" role="tab" class="langtab" data-lang-target="pt" aria-label="Português">PT</button>
     <button type="button" role="tab" class="langtab" data-lang-target="es" aria-label="Español">ES</button>
+    <button type="button" role="tab" class="langtab" data-lang-target="fr" aria-label="Français">FR</button>
   </div>
 </header>
 
@@ -41,12 +45,12 @@
 
   <!-- ============================================================ ENGLISH ==
        site.js stamps role="tabpanel" and aria-hidden on this element; never
-       hand-author those. The ids en / pt / es are the deep-link anchors the
-       iOS and Android apps use (privacy.html#pt, privacy.html#es). Portuguese and Spanish
-       are exact structural copies of this block with the copy swapped. -->
+       hand-author those. The ids en / pt / es / fr are the deep-link anchors the
+       iOS and Android apps use (privacy.html#pt, privacy.html#fr). Portuguese, Spanish
+       and French are exact structural copies of this block with the copy swapped. -->
   <section data-lang="en" id="en" lang="en" aria-label="English">
 
-    <p class="tag">Effective August 15, 2026 · supersedes the version of August 12, 2026</p>
+    <p class="tag">Effective September 22, 2026 · supersedes the version of August 15, 2026</p>
 
     <section>
       <p class="lede"><b>Officium collects no data.</b> The app has no analytics, no
@@ -67,7 +71,7 @@
       <p>The app keeps a small set of preferences in its own private storage on your
       device so that it works the way you left it:</p>
       <ul>
-        <li>your language (English, Portuguese or Spanish) and psalm translation choice;</li>
+        <li>your language (English, Portuguese, Spanish or French) and psalm translation choice;</li>
         <li>reading preferences — text size, Latin/vernacular arrangement, appearance;</li>
         <li>reading positions and playback speed, so an hour reopens where you left it;</li>
         <li>whether the welcome tour and reading tips have been shown.</li>
@@ -134,7 +138,7 @@
   <!-- ========================================================== PORTUGUÊS == -->
   <section data-lang="pt" id="pt" lang="pt-BR" aria-label="Português">
 
-    <p class="tag">Em vigor desde 15 de agosto de 2026 · substitui a versão de 12 de agosto de 2026</p>
+    <p class="tag">Em vigor desde 22 de setembro de 2026 · substitui a versão de 15 de agosto de 2026</p>
 
     <section>
       <p class="lede"><b>O Officium não coleta nenhum dado.</b> O aplicativo não tem
@@ -158,7 +162,7 @@
       armazenamento privado, no seu dispositivo, para funcionar do jeito que você
       deixou:</p>
       <ul>
-        <li>seu idioma (inglês, português ou espanhol) e a escolha de tradução dos salmos;</li>
+        <li>seu idioma (inglês, português, espanhol ou francês) e a escolha de tradução dos salmos;</li>
         <li>preferências de leitura — tamanho do texto, disposição latim/vernáculo, aparência;</li>
         <li>posições de leitura e velocidade de reprodução, para cada hora reabrir onde você parou;</li>
         <li>se o tour de boas-vindas e as dicas de leitura já foram mostrados.</li>
@@ -231,7 +235,7 @@
   <!-- ============================================================ ESPAÑOL == -->
   <section data-lang="es" id="es" lang="es-419" aria-label="Español">
 
-    <p class="tag">Vigente desde el 15 de agosto de 2026 · reemplaza la versión del 12 de agosto de 2026</p>
+    <p class="tag">Vigente desde el 22 de septiembre de 2026 · reemplaza la versión del 15 de agosto de 2026</p>
 
     <section>
       <p class="lede"><b>Officium no recopila ningún dato.</b> La aplicación no tiene
@@ -254,7 +258,7 @@
       almacenamiento privado, en su dispositivo, para funcionar tal como usted la
       dejó:</p>
       <ul>
-        <li>su idioma (inglés, portugués o español) y la elección de traducción de los salmos;</li>
+        <li>su idioma (inglés, portugués, español o francés) y la elección de traducción de los salmos;</li>
         <li>preferencias de lectura — tamaño del texto, disposición latín/vernáculo, apariencia;</li>
         <li>posiciones de lectura y velocidad de reproducción, para que cada hora se reabra donde la dejó;</li>
         <li>si el recorrido de bienvenida y los consejos de lectura ya se mostraron.</li>
@@ -324,14 +328,114 @@
 
   </section>
 
+  <!-- ============================================================ FRANÇAIS == -->
+  <section data-lang="fr" id="fr" lang="fr" aria-label="Français">
+
+    <p class="tag">En vigueur depuis le 22 septembre 2026 · remplace la version du 15 août 2026</p>
+
+    <section>
+      <p class="lede"><b>Officium ne collecte aucune donnée.</b> L’application n’a ni
+      outil d’analyse, ni publicité, ni pistage, ni système de compte, ni service réseau
+      exploité par le développeur. Tout le contenu liturgique, les données du calendrier
+      et l’audio de lecture à voix haute sont inclus dans l’application et fonctionnent
+      hors ligne. Cette politique expose en détail ce que cela signifie.</p>
+    </section>
+
+    <section class="legal">
+
+      <h2>Ce qu’Officium collecte</h2>
+      <p>Rien. Officium ne conserve aucun nom, aucune adresse e-mail, aucun compte, aucun
+      identifiant publicitaire ni aucune empreinte de l’appareil. Il ne contient aucun SDK
+      d’analyse ni de rapport de plantage et n’exploite aucun serveur à nous. Nous ne
+      pouvons pas savoir qui vous êtes, ce que vous priez, à quelle fréquence vous ouvrez
+      l’application — ni même si vous l’avez jamais ouverte.</p>
+
+      <h2>Ce qui reste sur votre appareil</h2>
+      <p>L’application conserve un petit ensemble de préférences dans son propre stockage
+      privé sur votre appareil, afin de fonctionner comme vous l’avez laissée :</p>
+      <ul>
+        <li>votre langue (anglais, portugais, espagnol ou français) et le choix de la traduction des psaumes ;</li>
+        <li>les préférences de lecture — taille du texte, disposition du latin et de la langue vernaculaire, apparence ;</li>
+        <li>les positions de lecture et la vitesse de l’audio, pour qu’une heure se rouvre là où vous l’avez laissée ;</li>
+        <li>l’affichage déjà fait ou non de la présentation d’accueil et des conseils de lecture.</li>
+      </ul>
+      <p>Ces préférences ne quittent jamais votre appareil — elles n’ont nulle part où
+      aller. Supprimer l’application les supprime.</p>
+
+      <h2>Achats et abonnements</h2>
+      <p>L’abonnement Officium Premium est proposé, facturé et renouvelé par la boutique
+      d’applications depuis laquelle vous avez installé Officium — Apple (App Store, via
+      StoreKit) sur iPhone et iPad, ou Google (Google Play Billing) sur Android. Vos
+      coordonnées de paiement, les informations de votre compte Apple ou Google et votre
+      historique de facturation sont entièrement gérés par cette boutique et ne nous sont
+      jamais communiqués. L’application vérifie ses droits d’accès sur l’appareil
+      lui-même. La gestion de l’abonnement, y compris la résiliation, se fait dans
+      Réglages → Compte Apple → Abonnements (iOS) ou dans Google Play → Abonnements
+      (Android). La manière dont chaque boutique traite les données d’achat est décrite
+      dans <a href="https://www.apple.com/legal/privacy/">la politique de confidentialité
+      d’Apple</a> et <a href="https://policies.google.com/privacy">la politique de
+      confidentialité de Google</a>.</p>
+
+      <h2>Liens qui sortent de l’application</h2>
+      <p>Quelques actions ouvrent quelque chose hors de l’application : ce site
+      d’assistance, cette politique de confidentialité, les conditions d’utilisation et
+      la possibilité d’évaluer Officium sur l’App Store ou sur Google Play. Ces pages
+      s’ouvrent dans votre navigateur, dans l’App Store ou dans Google Play, selon leurs
+      propres conditions ; Officium ne reçoit aucune donnée de ces visites. Ce site
+      lui-même est un ensemble de pages statiques servies par GitHub Pages, sans aucun
+      outil d’analyse de notre part.</p>
+
+      <h2>Services tiers</h2>
+      <p>Aucun, en dehors des services de plateforme d’Apple ou de Google décrits
+      ci-dessus. Officium n’intègre aucun SDK tiers, aucun réseau publicitaire ni aucun
+      service cloud. Les textes de prière, le calendrier 2026–2035 et les enregistrements
+      audio sont livrés dans l’application elle-même.</p>
+
+      <h2>Votre prière reste privée</h2>
+      <p>Ce que vous lisez, priez et écoutez dans Officium reste sur votre appareil. Nous
+      ne gardons aucune trace des heures que vous ouvrez, des psaumes sur lesquels vous
+      vous attardez ni des dévotions que vous pratiquez — par conception, aucune trace de
+      ce genre n’existe nulle part.</p>
+
+      <h2>Confidentialité des enfants</h2>
+      <p>Officium ne collecte aucune information personnelle auprès de quiconque, y
+      compris des enfants de moins de 13 ans. Aucune donnée n’étant collectée, il
+      n’y a rien qu’un parent ou un tuteur puisse nous demander d’examiner ou de
+      supprimer.</p>
+
+      <h2>Vos droits sur vos données</h2>
+      <p>Les lois sur la protection des données, comme le RGPD et le CCPA, vous donnent
+      des droits sur les données personnelles qu’un développeur détient à votre sujet.
+      Officium n’en détient aucune, si bien qu’il n’y a rien à communiquer, corriger,
+      exporter ou effacer : supprimer l’application de votre appareil efface tout ce
+      qu’elle a jamais enregistré. Pour toute question à ce sujet, écrivez-nous — nous
+      répondons personnellement.</p>
+
+      <h2>Modifications de cette politique</h2>
+      <p>Si Officium venait à changer d’une manière qui touche à la confidentialité, cette
+      page serait mise à jour en premier et la date d’entrée en vigueur ci-dessus
+      révisée. Comme l’application n’a aucun moyen de vous contacter, cette page est le
+      seul endroit à consulter.</p>
+
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Les questions sur la confidentialité — ou sur tout autre sujet — sont les
+      bienvenues.</p>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
+  </section>
+
 </main>
 
 <footer>
   <div class="brand">Officium — 1962 Roman Breviary</div>
   <nav>
-    <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte">Support</a> ·
-    <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad">Privacy Policy</a> ·
-    <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso">Terms of Use</a>
+    <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte" data-i18n-fr="Assistance">Support</a> ·
+    <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad" data-i18n-fr="Politique de confidentialité">Privacy Policy</a> ·
+    <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso" data-i18n-fr="Conditions d’utilisation">Terms of Use</a>
   </nav>
 </footer>
 
