@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n-en="Officium — Support" data-i18n-pt="Officium — Suporte" data-i18n-es="Officium — Soporte" data-i18n-fr="Officium — Assistance">Officium — Support</title>
+<title data-i18n-en="Officium — Support" data-i18n-pt="Officium — Suporte" data-i18n-es="Officium — Soporte" data-i18n-fr="Officium — Assistance" data-i18n-it="Officium — Assistenza">Officium — Support</title>
 <meta name="description"
-      content="Support for Officium: the 1962 Roman Breviary and the Little Office of the BVM for iOS and Android — all eight hours, Latin side by side with English, Portuguese, Spanish or French, offline. Features, pricing, FAQ and contact."
-      data-i18n-content-en="Support for Officium: the 1962 Roman Breviary and the Little Office of the BVM for iOS and Android — all eight hours, Latin side by side with English, Portuguese, Spanish or French, offline. Features, pricing, FAQ and contact."
-      data-i18n-content-pt="Suporte do Officium: o Breviário Romano de 1962 e o Ofício Parvo da B.V.M. para iOS e Android — as oito horas, latim lado a lado com inglês, português, espanhol ou francês, offline. Recursos, preços, perguntas frequentes e contato."
-      data-i18n-content-es="Soporte de Officium: el Breviario Romano de 1962 y el Oficio parvo de la B.V.M. para iOS y Android — las ocho horas, latín junto al inglés, portugués, español o francés, sin conexión. Funciones, precios, preguntas frecuentes y contacto."
-      data-i18n-content-fr="Assistance d’Officium : le bréviaire romain de 1962 et le Petit Office de la Sainte Vierge pour iOS et Android — les huit heures, le latin côte à côte avec l’anglais, le portugais, l’espagnol ou le français, hors ligne. Fonctionnalités, prix, questions fréquentes et contact.">
+      content="Support for Officium: the 1962 Roman Breviary and the Little Office of the BVM for iOS and Android — all eight hours, Latin side by side with English, Portuguese, Spanish, French or Italian, offline. Features, pricing, FAQ and contact."
+      data-i18n-content-en="Support for Officium: the 1962 Roman Breviary and the Little Office of the BVM for iOS and Android — all eight hours, Latin side by side with English, Portuguese, Spanish, French or Italian, offline. Features, pricing, FAQ and contact."
+      data-i18n-content-pt="Suporte do Officium: o Breviário Romano de 1962 e o Ofício Parvo da B.V.M. para iOS e Android — as oito horas, latim lado a lado com inglês, português, espanhol, francês ou italiano, offline. Recursos, preços, perguntas frequentes e contato."
+      data-i18n-content-es="Soporte de Officium: el Breviario Romano de 1962 y el Oficio Parvo de la B.V.M. para iOS y Android — las ocho horas, latín junto al inglés, portugués, español, francés o italiano, sin conexión. Funciones, precios, preguntas frecuentes y contacto."
+      data-i18n-content-fr="Assistance d’Officium : le bréviaire romain de 1962 et le Petit Office de la Sainte Vierge pour iOS et Android — les huit heures, le latin côte à côte avec l’anglais, le portugais, l’espagnol, le français ou l’italien, hors ligne. Fonctionnalités, prix, questions fréquentes et contact."
+      data-i18n-content-it="Assistenza di Officium: il Breviario Romano del 1962 e l’Ufficio Parvo della B.V.M. per iOS e Android — tutte le otto ore, il latino accanto all’inglese, al portoghese, allo spagnolo, al francese o all’italiano, offline. Funzionalità, prezzi, domande frequenti e contatti.">
 <link rel="icon" href="app-icon.png">
 <link rel="stylesheet" href="style.css">
 <script src="site.js" defer></script>
@@ -25,19 +26,22 @@
        data-i18n-aria-en="Officium app icon"
        data-i18n-aria-pt="Ícone do aplicativo Officium"
        data-i18n-aria-es="Ícono de la aplicación Officium"
-       data-i18n-aria-fr="Icône de l’application Officium"></div>
+       data-i18n-aria-fr="Icône de l’application Officium"
+       data-i18n-aria-it="Icona dell’app Officium"></div>
   <div class="wordmark">Officium</div>
   <p class="sub" data-i18n-en="The Traditional Divine Office"
      data-i18n-pt="O Ofício Divino Tradicional"
      data-i18n-es="El Oficio Divino Tradicional"
-     data-i18n-fr="L’Office divin traditionnel">The Traditional Divine Office</p>
+     data-i18n-fr="L’Office divin traditionnel"
+     data-i18n-it="L’Ufficio divino tradizionale">The Traditional Divine Office</p>
   <div class="rule"></div>
   <div class="langtabs" role="tablist" aria-label="Language"
-       data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma" data-i18n-aria-fr="Langue">
+       data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma" data-i18n-aria-fr="Langue" data-i18n-aria-it="Lingua">
     <button type="button" role="tab" class="langtab" data-lang-target="en" aria-label="English">EN</button>
     <button type="button" role="tab" class="langtab" data-lang-target="pt" aria-label="Português">PT</button>
     <button type="button" role="tab" class="langtab" data-lang-target="es" aria-label="Español">ES</button>
     <button type="button" role="tab" class="langtab" data-lang-target="fr" aria-label="Français">FR</button>
+    <button type="button" role="tab" class="langtab" data-lang-target="it" aria-label="Italiano">IT</button>
   </div>
 </header>
 
@@ -45,8 +49,8 @@
 
   <!-- ============================================================ ENGLISH ==
        site.js stamps role="tabpanel" and aria-hidden on this element; never
-       hand-author those. The ids en / pt / es / fr are the deep-link anchors
-       (index.html#pt, index.html#fr). Portuguese, Spanish and French are exact
+       hand-author those. The ids en / pt / es / fr / it are the deep-link anchors
+       (index.html#pt, index.html#fr). Portuguese, Spanish, French and Italian are exact
        structural copies of this block with the copy swapped. -->
   <section data-lang="en" id="en" lang="en" aria-label="English">
 
@@ -124,7 +128,7 @@
           <p class="price">$0 <small>forever</small></p>
           <ul>
             <li>Compline of the Roman office, correct for every day</li>
-            <li>Latin side by side with English, Portuguese, Spanish or French</li>
+            <li>Latin side by side with English, Portuguese, Spanish, French or Italian</li>
             <li>The full calendar with feast, class and colour — and widgets</li>
             <li>Newcomer guides: How to Pray, The Two Offices, glossary</li>
           </ul>
@@ -193,7 +197,7 @@
       </details>
       <details>
         <summary>Which languages does Officium speak?</summary>
-        <div class="a">English, Brazilian Portuguese, Spanish and French — interface,
+        <div class="a">English, Brazilian Portuguese, Spanish, French and Italian — interface,
         prayer translations and the Little Office audio alike. The Latin is always present.
         Switch in Settings → Reading → Language.</div>
       </details>
@@ -313,7 +317,7 @@
           <p class="price">US$ 0 <small>para sempre</small></p>
           <ul>
             <li>As Completas do ofício romano, corretas para cada dia</li>
-            <li>Latim lado a lado com português, inglês, espanhol ou francês</li>
+            <li>Latim lado a lado com português, inglês, espanhol, francês ou italiano</li>
             <li>O calendário completo com festa, classe e cor — e widgets</li>
             <li>Guias para iniciantes: Como rezar, Os dois Ofícios, glossário</li>
           </ul>
@@ -386,7 +390,7 @@
       </details>
       <details>
         <summary>Em quais idiomas o Officium fala?</summary>
-        <div class="a">Inglês, português do Brasil, espanhol e francês — interface,
+        <div class="a">Inglês, português do Brasil, espanhol, francês e italiano — interface,
         traduções das orações e o áudio do Ofício Parvo. O latim está sempre presente. Troque em
         Ajustes → Leitura → Idioma.</div>
       </details>
@@ -429,7 +433,7 @@
       <p class="lede"><span class="drop">O</span>fficium es el Breviario Romano
       tradicional — la edición típica de 1962, según las rúbricas de 1960 — con el
       oficio correcto ya determinado para cada día, latín y español lado a lado, y todo
-      funcionando sin conexión. Junto a él se reza el Oficio parvo de la Santísima
+      funcionando sin conexión. Junto a él se reza el Oficio Parvo de la Santísima
       Virgen María, el oficio de Nuestra Señora propio de los laicos, que también puede
       escuchar leído en voz alta.</p>
     </section>
@@ -509,7 +513,7 @@
           <p class="price">US$ 0 <small>para siempre</small></p>
           <ul>
             <li>Las Completas del oficio romano, correctas para cada día</li>
-            <li>Latín lado a lado con español, inglés, portugués o francés</li>
+            <li>Latín lado a lado con español, inglés, portugués, francés o italiano</li>
             <li>El calendario completo con fiesta, clase y color — y widgets</li>
             <li>Guías para principiantes: Cómo rezar, Los dos Oficios, glosario</li>
           </ul>
@@ -564,7 +568,7 @@
       <details>
         <summary>¿Qué desbloquea la suscripción?</summary>
         <div class="a">Las otras siete horas del oficio romano — Maitines, Laudes,
-        Prima, Tercia, Sexta, Nona y Vísperas — y el Oficio parvo de la Santísima
+        Prima, Tercia, Sexta, Nona y Vísperas — y el Oficio Parvo de la Santísima
         Virgen María completo, todos los días de 2026 a 2035, totalmente sin
         conexión.</div>
       </details>
@@ -587,7 +591,7 @@
       </details>
       <details>
         <summary>¿En qué idiomas habla Officium?</summary>
-        <div class="a">Inglés, portugués de Brasil, español y francés — interfaz,
+        <div class="a">Inglés, portugués de Brasil, español, francés e italiano — interfaz,
         traducciones de las oraciones y el audio del Oficio Parvo. El latín está siempre presente.
         Cámbielo en Configuración → Lectura → Idioma.</div>
       </details>
@@ -708,7 +712,7 @@
           <p class="price">0&nbsp;$&nbsp;US <small>pour toujours</small></p>
           <ul>
             <li>Les Complies de l’office romain, exactes pour chaque jour</li>
-            <li>Le latin côte à côte avec le français, l’anglais, le portugais ou l’espagnol</li>
+            <li>Le latin côte à côte avec le français, l’anglais, le portugais, l’espagnol ou l’italien</li>
             <li>Le calendrier complet avec fête, classe et couleur — et des widgets</li>
             <li>Guides pour débutants : Comment prier, Les deux Offices, glossaire</li>
           </ul>
@@ -784,7 +788,7 @@
       </details>
       <details>
         <summary>Quelles langues Officium parle-t-il ?</summary>
-        <div class="a">Anglais, portugais du Brésil, espagnol et français — interface,
+        <div class="a">Anglais, portugais du Brésil, espagnol, français et italien — interface,
         traductions des prières et audio du Petit Office. Le latin est toujours présent.
         Changez de langue dans Réglages → Lecture → Langue.</div>
       </details>
@@ -821,14 +825,210 @@
 
   </section>
 
+  <!-- ============================================================ ITALIANO == -->
+  <section data-lang="it" id="it" lang="it" aria-label="Italiano">
+
+    <section>
+      <p class="lede"><span class="drop">O</span>fficium è il Breviario Romano
+      tradizionale — l’edizione tipica del 1962, secondo le rubriche del 1960 — con
+      l’ufficio giusto già stabilito per ogni giorno, latino e italiano a fronte, e tutto
+      utilizzabile offline. Accanto a esso si prega l’Ufficio Parvo della Beata Vergine
+      Maria, l’ufficio della Madonna proprio dei laici, che può anche ascoltare letto ad
+      alta voce.</p>
+    </section>
+
+    <section>
+      <div class="eyebrow">Sulla pagina</div>
+      <div class="versicle">
+        <div class="v-col" lang="la">
+          <p><span class="vr">℣.</span> Deus <span class="cross">✠</span> in adiutórium meum inténde.</p>
+          <p><span class="vr">℟.</span> Dómine, ad adiuvándum me festína.</p>
+        </div>
+        <div class="v-col">
+          <p><span class="vr">℣.</span> O Dio, <span class="cross">✠</span> vieni in mio aiuto.</p>
+          <p><span class="vr">℟.</span> Signore, affrettati ad aiutarmi.</p>
+        </div>
+      </div>
+      <p class="note">Ogni ora si apre così — il latino accanto alla sua lingua, esattamente
+      come appare nell’app: <span class="vr">℣.</span> il versetto, <span class="vr">℟.</span>
+      la risposta, le rubriche in rosso.</p>
+    </section>
+
+    <section>
+      <div class="eyebrow">Che cosa contiene l’app</div>
+      <div class="grid">
+        <div class="card gild">
+          <h3><span class="mk">&#10016;</span>Tutte le otto ore</h3>
+          <p>Mattutino, Lodi, Prima, Terza, Sesta, Nona, Vespri e Compieta — il cursus
+          quotidiano completo dell’ufficio romano del 1962, per ogni giorno dal 2026 al
+          2035.</p>
+          <div class="hours">
+            <span>Mattutino</span><span>Lodi</span><span>Prima</span><span>Terza</span>
+            <span>Sesta</span><span>Nona</span><span>Vespri</span><span>Compieta</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>L’Ufficio Parvo della B.V.M.</h3>
+          <p>L’Officium Parvum completo, in una scheda tutta sua — il tradizionale ufficio
+          dei laici in onore della Madonna, con le sue varianti stagionali per tutto
+          l’anno.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Ascolti e segua la lettura</h3>
+          <p>Ogni ora dell’Ufficio Parvo può essere letta ad alta voce, completamente
+          offline, con l’evidenziazione versetto per versetto che segue la voce, la velocità
+          regolabile e i comandi sulla schermata di blocco.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Latino e italiano</h3>
+          <p>Il salterio clementino con l’italiano a fronte — oppure l’uno o l’altro da solo.
+          Salmi, cantici e letture della Scrittura nella traduzione di mons. Antonio Martini,
+          <i>La Sacra Bibbia secondo la Volgata</i> (1769–1781), di pubblico dominio; gli
+          altri testi, e qualsiasi versetto che l’edizione non fornisce, sono tradotti dal
+          latino da Officium stesso.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Un ordo tradizionale</h3>
+          <p>Il calendario indica la celebrazione, la classe e il colore liturgico di ogni
+          giorno, con widget per la schermata Home e per la schermata di blocco con la festa
+          del giorno.</p>
+        </div>
+        <div class="card">
+          <h3><span class="mk">&#10016;</span>Offline e riservato</h3>
+          <p>Nessun account, nessuna pubblicità, nessun tracciamento, nessun server dello
+          sviluppatore. Tutti i testi delle preghiere, l’audio e il calendario sono inclusi
+          nell’app. Compieta è gratuita per sempre.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Gratuito e Premium</div>
+      <div class="plans">
+        <div class="plan">
+          <h3>Gratuito</h3>
+          <p class="price">US$&nbsp;0 <small>per sempre</small></p>
+          <ul>
+            <li>Compieta dell’ufficio romano, corretta per ogni giorno</li>
+            <li>Il latino accanto all’italiano, all’inglese, al portoghese, allo spagnolo o al francese</li>
+            <li>Il calendario completo con festa, classe e colore — e i widget</li>
+            <li>Guide per chi comincia: Come pregare, I due uffici, glossario</li>
+          </ul>
+          <p class="trial">Nessun account, nessuna prova, niente da annullare.</p>
+        </div>
+        <div class="plan gild">
+          <h3>Officium Premium</h3>
+          <p class="price">US$&nbsp;2,99<small>/mese</small> · US$&nbsp;9,99<small>/anno</small></p>
+          <ul>
+            <li>Le altre sette ore dell’ufficio romano, dal Mattutino ai Vespri</li>
+            <li>L’Ufficio Parvo della B.V.M. completo</li>
+            <li>L’audio di lettura ad alta voce, con evidenziazione che segue la voce</li>
+            <li>Ogni giorno dal 2026 al 2035, completamente offline</li>
+          </ul>
+          <p class="trial">Prova gratuita di due settimane per i nuovi abbonati idonei.
+          Rinnovo automatico; può annullare in qualsiasi momento in Impostazioni → Account
+          Apple → Abbonamenti (iOS) o in Google Play → Abbonamenti (Android). Il prezzo
+          esatto nella sua valuta è indicato nell’App Store o in Google Play.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Da dove cominciare</div>
+      <ol class="steps">
+        <li><p><b>Preghi Compieta stasera.</b> È breve, bella e gratuita per sempre — apra
+        Oggi, scelga Compieta e legga. Il testo in rosso è un’indicazione; tutto il resto è
+        preghiera.</p></li>
+        <li><p><b>Cresca al suo ritmo.</b> Le Lodi al mattino e i Vespri la domenica
+        formano la classica regola dei laici — oppure tenga come compagno quotidiano
+        l’Ufficio Parvo della Madonna, dolce e quasi invariabile.</p></li>
+        <li><p><b>Lasci che sia l’app a insegnarle.</b> In Impostazioni → Aiuto trova Come
+        pregare l’Ufficio, I due uffici e un glossario di ogni termine che incontrerà sulla
+        pagina.</p></li>
+      </ol>
+    </section>
+
+    <section class="faq">
+      <div class="eyebrow">Domande frequenti</div>
+      <details open>
+        <summary>Quali rubriche segue Officium?</summary>
+        <div class="a">Le rubriche del 1960 (edizione tipica del 1962) — l’ufficio che si
+        prega insieme al Missale Romanum del 1962. La struttura quotidiana è verificata sul
+        progetto Divinum Officium.</div>
+      </details>
+      <details>
+        <summary>Compieta è davvero gratuita?</summary>
+        <div class="a">Sì — Compieta dell’ufficio romano è gratuita per sempre, senza
+        bisogno di un account.</div>
+      </details>
+      <details>
+        <summary>Che cosa sblocca l’abbonamento?</summary>
+        <div class="a">Le altre sette ore dell’ufficio romano — Mattutino, Lodi, Prima,
+        Terza, Sesta, Nona e Vespri — e l’Ufficio Parvo della Beata Vergine Maria completo,
+        ogni giorno dal 2026 al 2035, completamente offline.</div>
+      </details>
+      <details>
+        <summary>Posso ascoltare l’Ufficio Parvo?</summary>
+        <div class="a">Sì. Ogni ora può essere letta ad alta voce, completamente offline,
+        con l’evidenziazione versetto per versetto e la velocità di riproduzione
+        regolabile.</div>
+      </details>
+      <details>
+        <summary>Quale traduzione italiana viene usata?</summary>
+        <div class="a">Per i salmi, i cantici e le letture della Scrittura, quella di mons.
+        Antonio Martini, <i>La Sacra Bibbia secondo la Volgata</i> (1769–1781), di pubblico
+        dominio. Antifone, inni, responsori, orazioni, il Martirologio e qualsiasi versetto
+        che l’edizione non fornisce sono tradotti dal latino da Officium stesso, nello
+        stesso registro. (La scelta tra salterio moderno e tradizionale nelle Impostazioni
+        riguarda solo l’inglese.)</div>
+      </details>
+      <details>
+        <summary>Quali lingue parla Officium?</summary>
+        <div class="a">Inglese, portoghese del Brasile, spagnolo, francese e italiano —
+        interfaccia, traduzioni delle preghiere e audio dell’Ufficio Parvo. Il latino è
+        sempre presente. La lingua si cambia in Impostazioni → Lettura → Lingua.</div>
+      </details>
+      <details>
+        <summary>Officium è un’edizione liturgica ufficiale?</summary>
+        <div class="a">No — è un sussidio devozionale, preparato a partire da fonti
+        consolidate di pubblico dominio e da traduzioni proprie documentate, e verificato
+        strutturalmente su Divinum Officium. Il clero e i religiosi tenuti all’Ufficio
+        devono adempiere il loro obbligo con i propri libri e il proprio ordo.</div>
+      </details>
+      <details>
+        <summary>Officium ha bisogno di una connessione a Internet?</summary>
+        <div class="a">No. I testi delle preghiere, l’audio e il calendario 2026–2035 sono
+        inclusi e funzionano senza alcun server dello sviluppatore. L’acquisto o il
+        ripristino di un abbonamento passa per il servizio StoreKit di Apple (iOS) o per
+        Google Play Billing (Android); i link all’assistenza, ai documenti legali e alla
+        valutazione dell’app aprono servizi di Apple o di Google, oppure il suo
+        browser.</div>
+      </details>
+      <details>
+        <summary>Come si annulla l’abbonamento?</summary>
+        <div class="a">Impostazioni → Account Apple → Abbonamenti (iOS), oppure Google Play →
+        Abbonamenti (Android). L’accesso continua fino alla fine del periodo
+        pagato.</div>
+      </details>
+    </section>
+
+    <section class="contact">
+      <h2>Ci scriva</h2>
+      <p>Domande, correzioni a un testo o richieste di funzionalità — cerchiamo di
+      rispondere entro due giorni lavorativi.</p>
+      <p><a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a></p>
+    </section>
+
+  </section>
+
 </main>
 
 <footer>
   <div class="brand">Officium — 1962 Roman Breviary</div>
   <nav>
-    <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte" data-i18n-fr="Assistance">Support</a> ·
-    <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad" data-i18n-fr="Politique de confidentialité">Privacy Policy</a> ·
-    <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso" data-i18n-fr="Conditions d’utilisation">Terms of Use</a>
+    <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte" data-i18n-fr="Assistance" data-i18n-it="Assistenza">Support</a> ·
+    <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad" data-i18n-fr="Politique de confidentialité" data-i18n-it="Informativa sulla privacy">Privacy Policy</a> ·
+    <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso" data-i18n-fr="Conditions d’utilisation" data-i18n-it="Condizioni d’uso">Terms of Use</a>
   </nav>
 </footer>
 

@@ -265,7 +265,12 @@ footer nav a { margin:0 8px; border:none; }
 /* ---- Language tabs (EN · PT · ES) ----
    Sit in the hero under the gold rule; centred by the hero's text-align.
    Small caps and hairline gold, to match the eyebrow's restraint. */
-.langtabs { display:inline-flex; gap:8px; margin-top:26px; }
+/* Five pills (about 317px) outgrow a 320px screen's hero, whose overflow is
+   hidden: let the row wrap, centred, rather than clip the last tab. */
+.langtabs {
+  display:inline-flex; flex-wrap:wrap; justify-content:center;
+  gap:8px; margin-top:26px;
+}
 .langtab {
   appearance:none; -webkit-appearance:none; cursor:pointer;
   display:inline-flex; align-items:center; justify-content:center;
