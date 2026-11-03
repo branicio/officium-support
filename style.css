@@ -262,11 +262,11 @@ footer nav a { margin:0 8px; border:none; }
   .plans { grid-template-columns:1fr; }
 }
 
-/* ---- Language tabs (EN · PT · ES) ----
+/* ---- Language tabs (EN · PT · ES · FR · IT · DE) ----
    Sit in the hero under the gold rule; centred by the hero's text-align.
    Small caps and hairline gold, to match the eyebrow's restraint. */
-/* Five pills (about 317px) outgrow a 320px screen's hero, whose overflow is
-   hidden: let the row wrap, centred, rather than clip the last tab. */
+/* The pills outgrow a narrow screen's hero, whose overflow is hidden: let the
+   row wrap, centred, rather than clip the last tab (see the media queries below). */
 .langtabs {
   display:inline-flex; flex-wrap:wrap; justify-content:center;
   gap:8px; margin-top:26px;
@@ -287,6 +287,16 @@ footer nav a { margin:0 8px; border:none; }
 .langtab[aria-selected="true"] {
   background:var(--gold); border-color:var(--gold);
   color:var(--charcoal-2); font-weight:700;
+}
+/* Six pills (about 366px) wrapped 5 + 1 on a 375–390px phone, leaving one tab
+   alone on a second row. Tighter pills keep the six on one row down to 360px
+   (each stays at least 44px wide); below that, two even rows of three. */
+@media (max-width:480px) {
+  .langtabs { gap:6px; }
+  .langtab { min-width:44px; padding:7px 11px 6px; letter-spacing:.14em; }
+}
+@media (max-width:359px) {
+  .langtabs { display:inline-grid; grid-template-columns:repeat(3, auto); }
 }
 
 /* ---- Language sections ----

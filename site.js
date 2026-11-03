@@ -9,13 +9,13 @@
   document.documentElement.dataset.js = "on";
 
   try {
-    // #en / #pt / #es / #fr / #it is the deep-link contract: the iOS app links to
+    // #en / #pt / #es / #fr / #it / #de is the deep-link contract: the iOS app links to
     // privacy.html#pt, terms.html#fr, and so on. The hashes double as the
     // hand-authored section ids, so a no-JS visitor following a deep link
     // still lands on the right language in the stacked fallback.
-    var HASH = { en: "en", pt: "pt", es: "es", fr: "fr", it: "it" };
-    var LANG_ATTR = { en: "en", pt: "pt-BR", es: "es-419", fr: "fr", it: "it" };
-    var FRAGMENT = { en: "", pt: "#pt", es: "#es", fr: "#fr", it: "#it" };
+    var HASH = { en: "en", pt: "pt", es: "es", fr: "fr", it: "it", de: "de" };
+    var LANG_ATTR = { en: "en", pt: "pt-BR", es: "es-419", fr: "fr", it: "it", de: "de" };
+    var FRAGMENT = { en: "", pt: "#pt", es: "#es", fr: "#fr", it: "#it", de: "#de" };
     var STORE_KEY = "officium.lang";
     // The three real pages of this site, keyed by filename. Everything else
     // an <a> can point at — mailto:, apple.com/legal — is deliberately
@@ -25,7 +25,7 @@
     // A function rather than a map lookup, so no inherited Object property
     // ("constructor", "toString", ...) can masquerade as a stored language.
     function isLang(v) {
-      return v === "en" || v === "pt" || v === "es" || v === "fr" || v === "it";
+      return v === "en" || v === "pt" || v === "es" || v === "fr" || v === "it" || v === "de";
     }
 
     var sections = Array.prototype.slice.call(document.querySelectorAll("[data-lang]"));
@@ -119,7 +119,7 @@
 
     function pick() {
       // A language named in the URL outranks the stored preference on
-      // purpose: #pt / #es / #fr / #it / #en is an explicit, per-visit request — that
+      // purpose: #pt / #es / #fr / #it / #de / #en is an explicit, per-visit request — that
       // link was shared precisely to land the reader in that language —
       // while the stored value only records what this browser chose last
       // time. Then storage, then browser locale, then English.
@@ -132,6 +132,7 @@
       if (n.indexOf("es") === 0) return "es";
       if (n.indexOf("fr") === 0) return "fr";
       if (n.indexOf("it") === 0) return "it";
+      if (n.indexOf("de") === 0) return "de";
       return "en";
     }
 
@@ -140,8 +141,9 @@
     // therefore impossible.
     function resolveLang(lang) {
       var i;
-      // A page with no language sections (impressum.html shows every language at once)
-      // keeps the reader's language for its nav, footer and outgoing links.
+      // A page with no language sections (every page has them today; the guard
+      // stays so such a page would keep the reader's language for its nav,
+      // footer and outgoing links instead of forcing English).
       if (!sections.length) return Object.prototype.hasOwnProperty.call(FRAGMENT, lang) ? lang : "en";
       for (i = 0; i < sections.length; i++) {
         if (sections[i].dataset.lang === lang) return lang;

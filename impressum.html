@@ -21,59 +21,140 @@
        data-i18n-aria-pt="Ícone do aplicativo Officium"
        data-i18n-aria-es="Ícono de la aplicación Officium"
        data-i18n-aria-fr="Icône de l’application Officium"
-       data-i18n-aria-it="Icona dell’app Officium"></div>
+       data-i18n-aria-it="Icona dell’app Officium"
+       data-i18n-aria-de="App-Symbol von Officium"></div>
   <div class="wordmark">Officium</div>
-  <p class="sub">Impressum · Legal notice</p>
+  <p class="sub" data-i18n-en="Legal notice"
+     data-i18n-pt="Aviso legal"
+     data-i18n-es="Aviso legal"
+     data-i18n-fr="Mentions légales"
+     data-i18n-it="Note legali"
+     data-i18n-de="Impressum">Impressum · Legal notice</p>
   <div class="rule"></div>
   <div class="langtabs" role="tablist" aria-label="Language"
-       data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma" data-i18n-aria-fr="Langue" data-i18n-aria-it="Lingua">
+       data-i18n-aria-en="Language" data-i18n-aria-pt="Idioma" data-i18n-aria-es="Idioma" data-i18n-aria-fr="Langue" data-i18n-aria-it="Lingua" data-i18n-aria-de="Sprache">
     <button type="button" role="tab" class="langtab" data-lang-target="en" aria-label="English">EN</button>
     <button type="button" role="tab" class="langtab" data-lang-target="pt" aria-label="Português">PT</button>
     <button type="button" role="tab" class="langtab" data-lang-target="es" aria-label="Español">ES</button>
     <button type="button" role="tab" class="langtab" data-lang-target="fr" aria-label="Français">FR</button>
     <button type="button" role="tab" class="langtab" data-lang-target="it" aria-label="Italiano">IT</button>
+    <button type="button" role="tab" class="langtab" data-lang-target="de" aria-label="Deutsch">DE</button>
   </div>
 </header>
 
 <main>
 
-  <section class="legal">
-    <section lang="de" id="impressum">
-    <h2>Impressum</h2>
-    <p>Anbieter dieser Website und der App Officium:</p>
-    <h3>Angaben gemäß § 5 DDG</h3>
-    <p>Paulo Branicio<br>715 De La Fuente St<br>Monterey Park, CA 91754<br>USA</p>
-    <h3>Kontakt</h3>
-    <p>E-Mail: <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a><br>Telefon: <a href="tel:+16263809714">+1 626 380 9714</a></p>
-    <h3>Hosting</h3>
-    <p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
-    <h3>Verbraucherstreitbeilegung</h3>
-    <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-    <p>Datenschutz: siehe unsere <a href="privacy.html">Datenschutzerklärung</a>.</p>
+  <!-- ============================================================ ENGLISH ==
+       One section per site language, switched by the language bar like every other
+       page; with no JS they all stack. site.js stamps role="tabpanel" and aria-hidden;
+       never hand-author those. The ids en / pt / es / fr / it / de are the deep-link
+       anchors. Text: Marketing/legal-eu/eu_legal_texts.py impressum_section(),
+       never retyped. -->
+  <section data-lang="en" id="en" lang="en" aria-label="English">
+
+    <section class="legal">
+      <h2>Provider</h2>
+      <p>Provider of this website and of the app Officium (information pursuant to § 5 of the German Digital Services Act, DDG):</p>
+      <p>Paulo Branicio<br>715 De La Fuente St<br>Monterey Park, CA 91754<br>United States</p>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a><br>Phone: <a href="tel:+16263809714">+1 626 380 9714</a></p>
+      <h2>Hosting</h2>
+      <p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
+      <h2>Consumer dispute resolution</h2>
+      <p>Unless the law of your country requires it, we do not take part in proceedings before a consumer dispute resolution body.</p>
+      <p>Privacy: see our <a href="privacy.html">privacy policy</a>.</p>
     </section>
 
-    <section lang="en" id="legal-notice">
-    <h2>Legal notice</h2>
-    <p>Provider of this website and of the app Officium (information pursuant to § 5 of the German Digital Services Act, DDG):</p>
-    <p>Paulo Branicio<br>715 De La Fuente St<br>Monterey Park, CA 91754<br>United States<br>Email: <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a> · Phone: <a href="tel:+16263809714">+1 626 380 9714</a></p>
-    <p>Hosting: GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
-    <p>Consumer dispute resolution: unless the law of your country requires it, we do not take part in proceedings before a consumer dispute resolution body.</p>
-    <p>Privacy: see our <a href="privacy.html">privacy policy</a>.</p>
+  </section>
+
+  <!-- ========================================================== PORTUGUÊS == -->
+  <section data-lang="pt" id="pt" lang="pt-BR" aria-label="Português">
+
+    <section class="legal">
+      <h2>Responsável</h2>
+      <p>Responsável por este site e pelo app Officium (informações exigidas pelo § 5 da Lei alemã de Serviços Digitais, DDG):</p>
+      <p>Paulo Branicio<br>715 De La Fuente St<br>Monterey Park, CA 91754<br>Estados Unidos</p>
+      <h2>Contato</h2>
+      <p>E-mail: <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a><br>Telefone: <a href="tel:+16263809714">+1 626 380 9714</a></p>
+      <h2>Hospedagem</h2>
+      <p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
+      <h2>Resolução de litígios de consumo</h2>
+      <p>Salvo quando a lei do seu país o exigir, não participamos de procedimentos de resolução de litígios perante entidades de resolução alternativa de litígios de consumo.</p>
+      <p>Privacidade: veja nossa <a href="privacy.html">política de privacidade</a>.</p>
     </section>
 
-    <section lang="fr" id="mentions-legales">
-    <h2>Mentions légales</h2>
-    <p>Éditeur du site et de l’app Officium et directeur de la publication : Paulo Branicio, 715 De La Fuente St, Monterey Park, CA 91754, États-Unis · E-mail : <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a> · Téléphone : <a href="tel:+16263809714">+1 626 380 9714</a></p>
-    <p>Hébergeur : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
-    <p>Données personnelles : voir notre <a href="privacy.html">politique de confidentialité</a>.</p>
+  </section>
+
+  <!-- ============================================================ ESPAÑOL == -->
+  <section data-lang="es" id="es" lang="es-419" aria-label="Español">
+
+    <section class="legal">
+      <h2>Titular</h2>
+      <p>Titular de este sitio y de la app Officium (información exigida por el § 5 de la Ley alemana de Servicios Digitales, DDG):</p>
+      <p>Paulo Branicio<br>715 De La Fuente St<br>Monterey Park, CA 91754<br>Estados Unidos</p>
+      <h2>Contacto</h2>
+      <p>Correo electrónico: <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a><br>Teléfono: <a href="tel:+16263809714">+1 626 380 9714</a></p>
+      <h2>Alojamiento</h2>
+      <p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
+      <h2>Resolución de litigios de consumo</h2>
+      <p>Salvo que la ley de su país lo exija, no participamos en procedimientos de resolución de litigios ante entidades de resolución alternativa de litigios de consumo.</p>
+      <p>Privacidad: consulte nuestra <a href="privacy.html">política de privacidad</a>.</p>
     </section>
 
-    <section class="legal-others">
-    <p lang="pt"><strong>Aviso legal:</strong> responsável pelo site e pelo app Officium: Paulo Branicio, 715 De La Fuente St, Monterey Park, CA 91754, Estados Unidos · <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a> · <a href="tel:+16263809714">+1 626 380 9714</a>. Hospedagem: GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.</p>
-    <p lang="es"><strong>Aviso legal:</strong> titular del sitio y de la app Officium: Paulo Branicio, 715 De La Fuente St, Monterey Park, CA 91754, Estados Unidos · <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a> · <a href="tel:+16263809714">+1 626 380 9714</a>. Alojamiento: GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.</p>
-    <p lang="it"><strong>Note legali:</strong> titolare del sito e dell’app Officium: Paulo Branicio, 715 De La Fuente St, Monterey Park, CA 91754, Stati Uniti · <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a> · <a href="tel:+16263809714">+1 626 380 9714</a>. Hosting: GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.</p>
-    <p lang="el"><strong>Νομικές πληροφορίες:</strong> πάροχος του ιστότοπου και της εφαρμογής Officium: Paulo Branicio, 715 De La Fuente St, Monterey Park, CA 91754, Ηνωμένες Πολιτείες · <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a> · <a href="tel:+16263809714">+1 626 380 9714</a>. Φιλοξενία: GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.</p>
+  </section>
+
+  <!-- =========================================================== FRANÇAIS == -->
+  <section data-lang="fr" id="fr" lang="fr" aria-label="Français">
+
+    <section class="legal">
+      <h2>Éditeur</h2>
+      <p>Éditeur du site et de l’app Officium et directeur de la publication :</p>
+      <p>Paulo Branicio<br>715 De La Fuente St<br>Monterey Park, CA 91754<br>États-Unis</p>
+      <h2>Contact</h2>
+      <p>E-mail : <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a><br>Téléphone : <a href="tel:+16263809714">+1 626 380 9714</a></p>
+      <h2>Hébergeur</h2>
+      <p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
+      <h2>Règlement des litiges de consommation</h2>
+      <p>Sauf si la loi de votre pays l’exige, nous ne participons pas à des procédures de règlement des litiges devant un organisme de médiation de la consommation.</p>
+      <p>Données personnelles : voir notre <a href="privacy.html">politique de confidentialité</a>.</p>
     </section>
+
+  </section>
+
+  <!-- =========================================================== ITALIANO == -->
+  <section data-lang="it" id="it" lang="it" aria-label="Italiano">
+
+    <section class="legal">
+      <h2>Titolare</h2>
+      <p>Titolare di questo sito e dell’app Officium (informazioni ai sensi del § 5 della legge tedesca sui servizi digitali, DDG):</p>
+      <p>Paulo Branicio<br>715 De La Fuente St<br>Monterey Park, CA 91754<br>Stati Uniti</p>
+      <h2>Contatti</h2>
+      <p>E-mail: <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a><br>Telefono: <a href="tel:+16263809714">+1 626 380 9714</a></p>
+      <h2>Hosting</h2>
+      <p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
+      <h2>Risoluzione delle controversie dei consumatori</h2>
+      <p>Salvo che la legge del suo Paese lo imponga, non partecipiamo a procedure di risoluzione delle controversie davanti a un organismo di risoluzione alternativa delle controversie dei consumatori.</p>
+      <p>Privacy: veda la nostra <a href="privacy.html">informativa sulla privacy</a>.</p>
+    </section>
+
+  </section>
+
+  <!-- ============================================================ DEUTSCH == -->
+  <section data-lang="de" id="de" lang="de" aria-label="Deutsch">
+
+    <section class="legal">
+      <h2>Angaben gemäß § 5 DDG</h2>
+      <p>Anbieter dieser Website und der App Officium:</p>
+      <p>Paulo Branicio<br>715 De La Fuente St<br>Monterey Park, CA 91754<br>USA</p>
+      <h2>Kontakt</h2>
+      <p>E-Mail: <a href="mailto:braniapps@gmail.com">braniapps@gmail.com</a><br>Telefon: <a href="tel:+16263809714">+1 626 380 9714</a></p>
+      <h2>Hosting</h2>
+      <p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
+      <h2>Verbraucherstreitbeilegung</h2>
+      <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <p>Datenschutz: siehe unsere <a href="privacy.html">Datenschutzerklärung</a>.</p>
+    </section>
+
   </section>
 
 </main>
@@ -81,9 +162,9 @@
 <footer>
   <div class="brand">Officium — 1962 Roman Breviary</div>
   <nav>
-    <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte" data-i18n-fr="Assistance" data-i18n-it="Assistenza">Support</a> ·
-    <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad" data-i18n-fr="Politique de confidentialité" data-i18n-it="Informativa sulla privacy">Privacy Policy</a> ·
-    <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso" data-i18n-fr="Conditions d’utilisation" data-i18n-it="Condizioni d’uso">Terms of Use</a> ·
+    <a href="index.html" data-i18n-en="Support" data-i18n-pt="Suporte" data-i18n-es="Soporte" data-i18n-fr="Assistance" data-i18n-it="Assistenza" data-i18n-de="Support">Support</a> ·
+    <a href="privacy.html" data-i18n-en="Privacy Policy" data-i18n-pt="Política de Privacidade" data-i18n-es="Política de Privacidad" data-i18n-fr="Politique de confidentialité" data-i18n-it="Informativa sulla privacy" data-i18n-de="Datenschutzerklärung">Privacy Policy</a> ·
+    <a href="terms.html" data-i18n-en="Terms of Use" data-i18n-pt="Termos de Uso" data-i18n-es="Términos de Uso" data-i18n-fr="Conditions d’utilisation" data-i18n-it="Condizioni d’uso" data-i18n-de="Nutzungsbedingungen">Terms of Use</a> ·
     <a href="impressum.html" data-i18n-en="Legal notice" data-i18n-pt="Aviso legal" data-i18n-es="Aviso legal" data-i18n-fr="Mentions légales" data-i18n-it="Note legali" data-i18n-de="Impressum">Legal notice</a>
   </nav>
 </footer>
