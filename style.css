@@ -1,7 +1,7 @@
 /* Officium support site — illuminated-breviary editorial style.
    Shared by index / privacy / terms. */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url("fonts/fonts.css");
 
 :root {
   --charcoal:   #1F262F;
